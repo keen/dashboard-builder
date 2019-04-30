@@ -1,0 +1,384 @@
+body {
+  margin: 0;
+}
+
+#app {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  background: rgb(235, 235, 235);
+  min-height: 100vh;
+}
+
+.toolbar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 60px;
+  height: 100%;
+  z-index: 5;
+}
+
+.toolbar-bar {
+  background: lightgray;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 6;
+  border-right: 1px solid rgb(146, 145, 145);
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.toolbar-bar .plus-icon {
+  font-size: 20px;
+}
+
+.toolbar-bar h3 {
+  transform: translate(0,100%) rotate(-90deg);
+  transform-origin: 0 0;
+  white-space: nowrap;
+  overflow: hidden;
+  position: absolute;
+  top: 100px;
+  left: 18px;
+}
+
+.toolbar-hidden {
+  position: absolute;
+  left: -121px;
+  background: rgb(222, 240, 252);
+  padding: 10px 10px 10px 20px;
+  transition: left 0.5s;
+  height: 100%;
+  width: 150px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border-right: 1px solid rgb(146, 145, 145);
+}
+
+.toolbar-visible {
+  left: 60px;
+}
+
+.toolbar-hidden > h4 {
+  margin: 0;
+  width: 100%;
+}
+
+.toolbar-hidden p {
+  cursor: pointer;
+  z-index: 5;
+  font-size: 30px;
+  margin: 0;
+  padding: 10px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(222, 240, 252);
+}
+
+.dashboard-container {
+  width: 1200px;
+  background: rgb(245, 245, 245);
+  min-height: 100vh;
+  min-width: 1200px;
+}
+
+.dashboard-title {
+  height: 60px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.dashboard-title input {
+  border: 0;
+  background: inherit;
+  width: 100%;
+  font-size: 30px;
+  outline: none;
+  padding: 5px 5px 5px 20px;
+}
+
+.dashboard {
+  position: relative;
+  width: 100%;
+  min-height: calc(100vh - 60px);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.chart-container {
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  box-sizing: border-box;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.5s;
+}
+
+.chart-container:hover {
+  box-shadow: -6px 6px 8px 0 rgba(0, 0, 0, 0.23);
+}
+
+.chart-container .chart-title {
+  height: 40px;
+  width: 100%;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.chart-title input {
+  border: 0;
+  background: inherit;
+  outline: none;
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+}
+
+.resizers {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border: 2px dashed grey;
+  border-radius: 5px;
+  visibility: hidden;
+}
+
+.resizers div {
+  position: absolute;
+}
+
+.chart-container:hover .resizers,
+.chart-container:hover .config-buttons {
+  visibility: visible;
+}
+
+.chart-container > .keen-dataviz {
+  z-index: 1;
+  max-width: inherit;
+  max-height: inherit;
+}
+
+.top-left {
+  left: 0;
+  top: 0;
+  cursor: nwse-resize;
+  width: 10px;
+  height: 10px;
+  z-index: 3;
+}
+
+.top-right {
+  right: 0;
+  top: 0;
+  cursor: nesw-resize;
+  width: 10px;
+  height: 10px;
+  z-index: 3;
+}
+
+.bottom-left {
+  left: 0;
+  bottom: 0;
+  cursor: nesw-resize;
+  width: 10px;
+  height: 10px;
+  z-index: 3;
+}
+
+.bottom-right {
+  right: 1px;
+  bottom: 1px;
+  cursor: nwse-resize;
+  width: 12px;
+  height: 12px;
+  z-index: 3;
+  border-style: solid;
+  border-width: 0 0 12px 12px;
+  border-color: transparent transparent grey transparent;
+  box-sizing: border-box;
+}
+
+.left {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 5px;
+  cursor: ew-resize;
+  z-index: 2;
+}
+
+.right {
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 5px;
+  cursor: ew-resize;
+  z-index: 2;
+}
+
+.top {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 5px;
+  cursor: ns-resize;
+  z-index: 2;
+}
+
+.bottom {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 5px;
+  cursor: ns-resize;
+  z-index: 2;
+}
+
+.config-buttons {
+  position: absolute;
+  top: -1px;
+  right: -35px;
+  display: flex;
+  flex-direction: column;
+  visibility: hidden;
+  z-index: 3;
+  padding-left: 5px;
+}
+
+.config-buttons div {
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  background: black;
+  color: white;
+  font-size: 15px;
+  box-sizing: border-box;
+  margin-bottom: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.7;
+  border-radius: 3px;
+  z-index: 3;
+}
+
+.config-buttons div:hover {
+  background: rgb(66, 66, 66);
+}
+
+.container {
+  width: 1200px;
+  background: rgb(245, 245, 245);
+  min-height: 100vh;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  box-sizing: border-box;
+}
+
+.top-toolbar {
+  flex: 1 100%;
+  padding: 10px 20px 20px 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  border-bottom: 1px solid rgb(207, 207, 207);
+  margin-bottom: 10px;
+}
+
+.new-dashboard-button {
+  border-radius: 5px;
+  border: 1px solid rgb(49, 148, 179);
+  padding: 5px;
+  cursor: pointer;
+  color: rgb(49, 148, 179);
+  transition: 0.5s;
+}
+
+.new-dashboard-button:hover {
+  color: white;
+  background: rgb(49, 148, 179);
+}
+
+.search {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  font-size: 15px;
+}
+
+.search svg {
+  margin: 9px 5px 0 0;
+}
+
+.search input {
+  border: 0;
+  background: inherit;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  font-size: 20px;
+}
+
+.dashboard-item {
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  width: 18%;
+  height: 200px;
+  margin: 0 20px 20px 0;
+  transition: box-shadow 0.5s;
+  position: relative;
+}
+
+.dashboard-item a {
+  text-decoration: none;
+  color: black;
+}
+
+.dashboard-item-buttons {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+  visibility: hidden;
+}
+
+.dashboard-item:hover > .dashboard-item-buttons {
+  visibility: visible;
+}
+
+.dashboard-item:hover {
+  box-shadow: -6px 6px 8px 0 rgba(0, 0, 0, 0.23);
+}
+
+@media only screen and (max-width: 1300px) {
+  .dashboard-container {
+    position: absolute;
+    left: 60px;
+  }
+}
