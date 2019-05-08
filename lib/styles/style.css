@@ -17,7 +17,7 @@ body {
   top: 0;
   width: 60px;
   height: 100%;
-  z-index: 5;
+  z-index: 10;
 }
 
 .toolbar-bar {
@@ -171,8 +171,6 @@ body {
 
 .chart-container > .keen-dataviz {
   z-index: 1;
-  max-width: inherit;
-  max-height: inherit;
 }
 
 .top-left {
@@ -287,7 +285,6 @@ body {
   width: 1200px;
   background: rgb(245, 245, 245);
   min-height: 100vh;
-  padding: 10px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -297,13 +294,12 @@ body {
 
 .top-toolbar {
   flex: 1 100%;
-  padding: 10px 20px 20px 10px;
+  padding: 20px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
   border-bottom: 1px solid rgb(207, 207, 207);
-  margin-bottom: 10px;
 }
 
 .new-dashboard-button {
@@ -341,26 +337,32 @@ body {
   font-size: 20px;
 }
 
-.dashboard-item {
+.dashboard-list-item {
+  width: 20%;
+  height: 200px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.dashboard-list-item-box {
   background: white;
   display: flex;
   justify-content: center;
   align-items: center;
   border: 1px solid #eee;
   border-radius: 5px;
-  width: 18%;
-  height: 200px;
-  margin: 0 20px 20px 0;
+  width: 100%;
+  height: 100%;
   transition: box-shadow 0.5s;
   position: relative;
 }
 
-.dashboard-item a {
+.dashboard-list-item-box a {
   text-decoration: none;
   color: black;
 }
 
-.dashboard-item-buttons {
+.dashboard-list-item-box-buttons {
   position: absolute;
   top: 5px;
   right: 5px;
@@ -368,12 +370,30 @@ body {
   visibility: hidden;
 }
 
-.dashboard-item:hover > .dashboard-item-buttons {
+.dashboard-list-item-box:hover > .dashboard-list-item-box-buttons {
   visibility: visible;
 }
 
-.dashboard-item:hover {
+.dashboard-list-item-box:hover {
   box-shadow: -6px 6px 8px 0 rgba(0, 0, 0, 0.23);
+}
+
+.message {
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+}
+
+.saved-select {
+  position: absolute;
+  top: 36px;
+  width: 100%;
+  height: calc(100% - 36px);
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(150, 150, 150, 0.5);
 }
 
 @media only screen and (max-width: 1300px) {

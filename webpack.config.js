@@ -1,5 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
+const HtmlWebPackPlugin = require("html-webpack-plugin");
 
 const extendedPath = path.resolve(__dirname, 'dist');
 
@@ -45,6 +46,14 @@ module.exports = {
     ],
 
   },
+
+  plugins: [
+    new HtmlWebPackPlugin({
+      template: './test/demo/index.html',
+      filename: './index.html',
+      title: 'Dashboard Builder'
+    })
+  ],
 
   resolve: {
     modules: [

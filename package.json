@@ -1,5 +1,5 @@
 {
-  "name": "keen-dashboard-builder",
+  "name": "dashboard-builder",
   "description": "Dashboard builder for Keen.io",
   "license": "MIT",
   "version": "1.0.0",
@@ -7,17 +7,20 @@
   "scripts": {
     "start": "concurrently --kill-others \"NODE_ENV=development webpack-dev-server\"",
     "build": "NODE_ENV=production webpack -p",
+    "build:gh-pages": "NODE_ENV=development webpack --mode development",
     "preversion": "npm run test",
     "version": "npm run build && git add .",
     "postversion": "git push && git push --tags",
     "test": "NODE_ENV=test jest",
-    "test:watch": "NODE_ENV=test jest --watch"
+    "test:watch": "NODE_ENV=test jest --watch",
+    "predeploy": "npm run build:gh-pages",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/keen/keen-dashboard-builder.git"
+    "url": "https://github.com/keen/dashboard-builder.git"
   },
-  "bugs": "https://github.com/keen/keen-dashboard-builder/issues",
+  "bugs": "hhttps://github.com/keen/dashboard-builder/issues",
   "author": "Keen.IO <team@keen.io> (https://keen.io/)",
   "contributors": [
     "Dariusz Łacheta <dariusz.lacheta@keen.io> (https://github.com/dariuszlacheta)"
@@ -47,10 +50,8 @@
     "@fortawesome/free-solid-svg-icons": "^5.8.1",
     "@fortawesome/react-fontawesome": "^0.1.4",
     "babel-jest": "^24.7.1",
-    "i": "^0.3.6",
-    "keen-dataviz": "^3.5.3",
-    "keen-react-charts": "1.0.2",
-    "npm": "^6.9.0",
+    "keen-dataviz": "^3.8.0",
+    "lodash": "^4.17.11",
     "prop-types": "^15.6.2",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
@@ -70,6 +71,7 @@
     "babel-plugin-transform-es2015-arrow-functions": "^6.22.0",
     "babel-plugin-transform-object-assign": "^6.22.0",
     "concurrently": "^3.5.1",
+    "gh-pages": "^2.0.1",
     "css-loader": "^1.0.0",
     "cssnano": "^3.10.0",
     "enzyme": "^3.7.0",
