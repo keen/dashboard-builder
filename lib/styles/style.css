@@ -50,7 +50,7 @@ body {
   left: -121px;
   background: rgb(222, 240, 252);
   padding: 10px 10px 10px 20px;
-  transition: left 0.5s;
+  transition: left 0.3s;
   height: 100%;
   width: 150px;
   display: flex;
@@ -125,7 +125,7 @@ body {
   border-radius: 5px;
   display: flex;
   flex-direction: column;
-  transition: box-shadow 0.5s;
+  transition: box-shadow 0.3s;
 }
 
 .chart-container:hover {
@@ -179,7 +179,7 @@ body {
   cursor: nwse-resize;
   width: 10px;
   height: 10px;
-  z-index: 3;
+  z-index: 4;
 }
 
 .top-right {
@@ -188,7 +188,7 @@ body {
   cursor: nesw-resize;
   width: 10px;
   height: 10px;
-  z-index: 3;
+  z-index: 4;
 }
 
 .bottom-left {
@@ -197,7 +197,7 @@ body {
   cursor: nesw-resize;
   width: 10px;
   height: 10px;
-  z-index: 3;
+  z-index: 4;
 }
 
 .bottom-right {
@@ -206,7 +206,7 @@ body {
   cursor: nwse-resize;
   width: 12px;
   height: 12px;
-  z-index: 3;
+  z-index: 4;
   border-style: solid;
   border-width: 0 0 12px 12px;
   border-color: transparent transparent grey transparent;
@@ -219,7 +219,7 @@ body {
   height: 100%;
   width: 5px;
   cursor: ew-resize;
-  z-index: 2;
+  z-index: 3;
 }
 
 .right {
@@ -228,7 +228,7 @@ body {
   height: 100%;
   width: 5px;
   cursor: ew-resize;
-  z-index: 2;
+  z-index: 3;
 }
 
 .top {
@@ -237,7 +237,7 @@ body {
   width: 100%;
   height: 5px;
   cursor: ns-resize;
-  z-index: 2;
+  z-index: 3;
 }
 
 .bottom {
@@ -246,7 +246,7 @@ body {
   width: 100%;
   height: 5px;
   cursor: ns-resize;
-  z-index: 2;
+  z-index: 3;
 }
 
 .config-buttons {
@@ -308,7 +308,7 @@ body {
   padding: 5px;
   cursor: pointer;
   color: rgb(49, 148, 179);
-  transition: 0.5s;
+  transition: 0.3s;
 }
 
 .new-dashboard-button:hover {
@@ -342,6 +342,7 @@ body {
   height: 200px;
   padding: 10px;
   box-sizing: border-box;
+  position: relative;
 }
 
 .dashboard-list-item-box {
@@ -353,24 +354,19 @@ body {
   border-radius: 5px;
   width: 100%;
   height: 100%;
-  transition: box-shadow 0.5s;
-  position: relative;
-}
-
-.dashboard-list-item-box a {
-  text-decoration: none;
+  transition: box-shadow 0.3s;
   color: black;
 }
 
-.dashboard-list-item-box-buttons {
+.dashboard-list-item-buttons {
   position: absolute;
-  top: 5px;
-  right: 5px;
+  top: 15px;
+  right: 15px;
   cursor: pointer;
   visibility: hidden;
 }
 
-.dashboard-list-item-box:hover > .dashboard-list-item-box-buttons {
+.dashboard-list-item:hover > .dashboard-list-item-buttons {
   visibility: visible;
 }
 
@@ -389,12 +385,13 @@ body {
   top: 36px;
   width: 100%;
   height: calc(100% - 36px);
-  z-index: 5;
+  z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
   background: rgb(150, 150, 150, 0.5);
 }
+
 
 @media only screen and (max-width: 1300px) {
   .dashboard-container {
