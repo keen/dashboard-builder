@@ -36,7 +36,7 @@ body {
 }
 
 .toolbar-bar h3 {
-  transform: translate(0,100%) rotate(-90deg);
+  transform: translate(0, 100%) rotate(-90deg);
   transform-origin: 0 0;
   white-space: nowrap;
   overflow: hidden;
@@ -59,7 +59,7 @@ body {
   width: 150px;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
 }
 
 .toolbar-visible {
@@ -398,6 +398,8 @@ body {
   justify-content: center;
   align-items: center;
   background: rgb(150, 150, 150, 0.5);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 .saved-select select {
@@ -408,6 +410,23 @@ body {
   z-index: 5;
   background: white;
   padding: 5px;
+}
+
+.save-dashboard-button {
+  border-radius: 5px;
+  border: 1px solid rgb(33, 156, 64);
+  padding: 5px;
+  cursor: pointer;
+  color: rgb(33, 156, 64);
+  transition: 0.3s;
+  width: 80px;
+  margin-right: 10px;
+  text-align: center;
+}
+
+.save-dashboard-button:hover {
+  color: white;
+  background: rgb(33, 156, 64);
 }
 
 @media only screen and (max-width: 1300px) {
