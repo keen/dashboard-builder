@@ -5,7 +5,7 @@ const HtmlWebPackPlugin = require("html-webpack-plugin");
 const extendedPath = path.resolve(__dirname, 'dist');
 
 const fileName = 'main';
-const entry = ( process.env.NODE_ENV === 'development' ) ? './lib/index.js' : './preview/index.js';
+const entry = ( process.env.NODE_ENV === 'development' ) ? './lib/builder/index.js' : './lib/viewer/index.js';
 
 module.exports = {
   entry,

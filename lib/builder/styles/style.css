@@ -75,6 +75,13 @@ body {
 
 .toolbar-hidden > h4 {
   width: 100%;
+  margin: 3rem 0 1rem;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.toolbar-hidden > h4:first-of-type {
+  margin-top: 1rem;
 }
 
 .toolbar-hidden p {
