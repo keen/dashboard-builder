@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import TopDashboardEditorToolbar from "./TopDashboardEditorToolbar";
-import DashboardEditor from "./DashboardEditor";
+import EditorTopToolbar from "./EditorTopToolbar";
+import EditorDashboard from "./EditorDashboard";
 
 export default class Editor extends Component {
   constructor(props) {
@@ -41,10 +41,10 @@ export default class Editor extends Component {
       <React.Fragment>
         <div className="dashboard-container">
           <div className="dashboard-inner-container">
-            <TopDashboardEditorToolbar
+            <EditorTopToolbar
               dashboardTitle={dashboardTitle}
             />
-            <DashboardEditor
+            <EditorDashboard
               ref={this.ref}
               dashboardData={dashboardData}
             />

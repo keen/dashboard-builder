@@ -1,6 +1,6 @@
 import React from "react";
 
-const TopDashboardEditorToolbar = ({
+const EditorTopToolbar = ({
   dashboardTitle,
 }) => {
   return (
@@ -15,4 +15,4 @@ const TopDashboardEditorToolbar = ({
   );
 };
 
-export default TopDashboardEditorToolbar;
+export default EditorTopToolbar;

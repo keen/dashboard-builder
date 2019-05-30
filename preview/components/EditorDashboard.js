@@ -3,7 +3,7 @@ import Chart from "./Chart";
 import ReactHtmlParser from 'react-html-parser';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const Dashboard = React.forwardRef(
+const EditorDashboard = React.forwardRef(
   (
     {
       dashboardData,
@@ -39,14 +39,18 @@ const Dashboard = React.forwardRef(
                 className="chart-container"
                 key={index}
               >
-                {type !== "image" && type !== "paragraph" ? (
+                {type === "paragraph" ? (
+                  text && <div className="paragraph" style={{width, height}}>{ReactHtmlParser(text)}</div>
+                ) : type === "image" ? (
+                  src && <img style={{width, height}} src={src} />
+                ) : (
                   <React.Fragment>
                     <div className="chart-title">
                       <input
                         type="text"
-                        defaultValue={chartTitle}
+                        value={chartTitle}
+                        onChange={e => changeTitle(e, index)}
                         placeholder="Enter your title..."
-                        disabled
                       />
                     </div>
                     <Chart
@@ -65,10 +69,6 @@ const Dashboard = React.forwardRef(
                       }
                     />
                   </React.Fragment>
-                ) : type === "image" ? (
-                  src && <img style={{width, height}} src={src} />
-                ) : (
-                  text && <div className="paragraph" style={{width, height}}>{ReactHtmlParser(text)}</div>
                 )}
 
                 {!results &&
@@ -94,11 +94,11 @@ const Dashboard = React.forwardRef(
             );
           })
         ) : (
-          <div className="message">Add some charts from the left...</div>
+          <div className="message">Dashboard is empty...</div>
         )}
       </div>
     );
   }
 );
 
-export default Dashboard;
+export default EditorDashboard;

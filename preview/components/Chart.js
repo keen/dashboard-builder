@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import KeenDataviz from "keen-dataviz";
-import _ from "lodash";
 
 export default class Chart extends Component {
   constructor(props) {
@@ -15,22 +14,6 @@ export default class Chart extends Component {
 
   componentWillUnmount() {
     this.keenDataviz.destroy();
-  }
-
-  shouldComponentUpdate(nextProps, nextState) {
-    if (
-      this.props.width !== nextProps.width ||
-      this.props.height !== nextProps.height ||
-      this.props.palette !== nextProps.palette ||
-      this.props.type !== nextProps.type ||
-      this.props.legend.position !== nextProps.legend.position ||
-      this.props.sparkline !== nextProps.sparkline ||
-      this.props.stacking !== nextProps.stacking ||
-      !_.isEqual(this.props.results.result, nextProps.results.result)
-    ) {
-      return true;
-    }
-    return false;
   }
 
   createKeenDataviz() {
