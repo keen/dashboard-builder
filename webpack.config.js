@@ -4,8 +4,22 @@ const HtmlWebPackPlugin = require("html-webpack-plugin");
 
 const extendedPath = path.resolve(__dirname, 'dist');
 
-const fileName = 'main';
-const entry = ( process.env.NODE_ENV === 'development' ) ? './lib/builder/index.js' : './lib/viewer/index.js';
+switch (process.env.NODE_ENV) {
+  case 'production':
+    entry = {
+      main: './lib/builder/index.js',
+      viewer:  './lib/viewer/index.js'
+    }
+    break;
+
+  case 'development':
+    entry = './lib/builder/index.js';
+    break;
+
+  default:
+    entry = './lib/viewer/index.js';
+    break;
+}
 
 module.exports = {
   entry,
@@ -14,8 +28,8 @@ module.exports = {
 
   output: {
     path: extendedPath,
-    filename: `${
-      fileName
+    filename: `[name]${
+      process.env.OPTIMIZE_MINIMIZE ? '.min' : ''
     }.js`,
     library: `${!process.env.LIBRARY ? '' : process.env.LIBRARY}`,
     libraryTarget: 'umd',

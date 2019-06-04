@@ -6,12 +6,14 @@
   "main": "dist/main.js",
   "scripts": {
     "start": "concurrently --kill-others \"NODE_ENV=development webpack-dev-server\"",
-    "build": "NODE_ENV=production webpack -p",
+    "build": "NODE_ENV=production OPTIMIZE_MINIMIZE=1 webpack -p && npm run build:css && npm run build:css:min",
+    "build:css": "node_modules/postcss-cli/bin/postcss lib/styles/style.css -o dist/style.css --config postcss.config.js",
+    "build:css:min": "OPTIMIZE_MINIMIZE=1 node_modules/postcss-cli/bin/postcss lib/styles/style.css -o dist/style.min.css --config postcss.config.js",
     "build:gh-pages": "NODE_ENV=development webpack --mode development",
     "preversion": "npm run test",
     "version": "npm run build && git add .",
     "postversion": "git push && git push --tags",
-    "preview": "concurrently --kill-others \"NODE_ENV=none webpack-dev-server\"",
+    "viewer": "concurrently --kill-others \"NODE_ENV=none webpack-dev-server\"",
     "test": "NODE_ENV=test jest",
     "test:watch": "NODE_ENV=test jest --watch",
     "predeploy": "npm run build:gh-pages",
@@ -59,7 +61,8 @@
     "react-html-parser": "^2.0.2",
     "react-quill": "^1.3.3",
     "react-router-dom": "^5.0.0",
-    "react-select": "^2.4.3"
+    "react-select": "^2.4.3",
+    "react-tabs": "^3.0.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
