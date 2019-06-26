@@ -13,13 +13,26 @@ switch (process.env.NODE_ENV) {
     break;
 
   case 'development':
-    entry = './lib/builder/index.js';
+    switch (process.env.component) {
+      case 'builder':
+        entry = './lib/builder/index.js';
+        break;
+      case 'viewer':
+        entry = './lib/viewer/index.js';
+        break;
+    
+      default:
+        entry = './lib/index.js';
+        break;
+    }
     break;
 
   default:
-    entry = './lib/viewer/index.js';
+    entry = './lib/index.js';
     break;
 }
+
+
 
 module.exports = {
   entry,
