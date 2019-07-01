@@ -48,6 +48,19 @@ export const oldDashboards = [
             query_name: "pie-chart-mobile"
           }
         ]
+      },
+      {
+        height: 231,
+        tiles: [
+          {
+            column_width: 4,
+            query_name: "books-purchases"
+          },
+          {
+            column_width: 8,
+            query_name: "games-purchases"
+          },
+        ]
       }
     ],
     title: "Untitledxcvxcvxcv"
