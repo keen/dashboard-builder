@@ -571,9 +571,6 @@ body {
 }
 
 .settings {
-  /* position: fixed; */
-  top: 0;
-  right: 0;
   width: 300px;
   height: 100%;
   padding: 15px;
