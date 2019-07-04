@@ -132,12 +132,94 @@ body {
   width: 100%;
   font-size: 30px;
   outline: none;
-  padding: 5px 5px 5px 20px;
+  padding: 5px 5px 5px 0;
 }
 
 .dashboard-title a {
   text-decoration: none;
 }
+
+.burger-icon {
+  padding: 0 20px;
+  font-size: 20px;
+  cursor: pointer;
+  position: relative;
+}
+
+.burger-icon:hover .fa-bars {
+  transform: rotate(90deg);
+  transition: 0.3s;
+}
+
+.editor-dashboard-switch {
+  position: absolute;
+  background: #fff;
+  box-sizing: border-box;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  z-index: 1001;
+  top: 0;
+  left: 20px;
+  font-size: 14px;
+  width: 250px;
+  box-shadow: -6px 6px 8px 0 rgba(0, 0, 0, 0.23);
+  animation: fadeIn 0.3s;
+}
+
+.editor-dashboard-switch .header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+  font-size: 17px;
+}
+
+.editor-dashboard-switch .body {
+  max-height: 300px;
+  overflow: auto;
+}
+
+.editor-dashboard-switch .body div {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.editor-dashboard-switch .body div:hover {
+  background: rgb(243, 243, 243);
+}
+
+.editor-dashboard-switch .body div .active {
+  color: rgb(49, 148, 179);
+  padding-right: 5px;
+}
+
+.editor-dashboard-switch .footer {
+  padding: 10px;
+}
+
+.editor-dashboard-switch-black {
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+  background: #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  animation: fadeInBlack 0.3s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes fadeInBlack {
+  from { opacity: 0; }
+  to   { opacity: 0.4; }
+}
+
 
 .dashboard {
   position: relative;
