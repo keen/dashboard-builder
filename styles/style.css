@@ -565,9 +565,13 @@ body {
   min-width: 300px;
   min-height: 100%;
   background: #fff;
-  z-index: 101;
   box-shadow: -3px -3px 6px #eee;
   position: relative;
+}
+
+.settings-container .keen-theme-builder .color-palette__list .color-picker__popover {
+  right: 0;
+  left: auto;
 }
 
 .settings {
