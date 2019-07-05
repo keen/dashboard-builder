@@ -766,6 +766,10 @@ body {
   }
 }
 
+.keen-theme-builder .color-picker__popover {
+  z-index: 1000;
+}
+
 /* to be removed once theme-builder 1.0.7 is ready */
 .keen-theme-builder .color-picker__input {
   min-width: 0;
