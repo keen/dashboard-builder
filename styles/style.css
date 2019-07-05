@@ -647,15 +647,16 @@ body {
   min-width: 300px;
   min-height: 100%;
   background: #fff;
-  z-index: 101;
   box-shadow: -3px -3px 6px #eee;
   position: relative;
 }
 
-.settings {
-  position: fixed;
-  top: 0;
+.settings-container .keen-theme-builder .color-palette__list .color-picker__popover {
   right: 0;
+  left: auto;
+}
+
+.settings {
   width: 300px;
   height: 100%;
   padding: 15px;
@@ -763,4 +764,8 @@ body {
   .dashboard-container {
     padding-left: 180px;
   }
+}
+
+.keen-theme-builder .color-picker__popover {
+  z-index: 1000;
 }
