@@ -13,6 +13,16 @@ body {
   position: relative;
 }
 
+.dashboard-top-bar {
+  height: 50px;
+  width: 100%;
+  background: #f9f9f9;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
 .toolbar {
   position: fixed;
   left: 0;
@@ -74,8 +84,9 @@ body {
 }
 
 .toolbar-hidden > h4 {
+  font-size: 0.7rem;
   width: 100%;
-  margin: 3rem 0 1rem;
+  margin: 2rem 0 0.5rem;
   font-weight: 400;
   text-transform: uppercase;
 }
@@ -124,6 +135,7 @@ body {
   position: relative;
   display: flex;
   align-items: center;
+  margin: 0.5rem;
 }
 
 .dashboard-title input {
@@ -146,9 +158,8 @@ body {
   position: relative;
 }
 
-.burger-icon:hover .fa-bars {
-  transform: rotate(90deg);
-  transition: 0.3s;
+.burger-icon .fa-bars {
+  color: #008cde;
 }
 
 .editor-dashboard-switch {
@@ -211,20 +222,27 @@ body {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to   { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes fadeInBlack {
-  from { opacity: 0; }
-  to   { opacity: 0.4; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.4;
+  }
 }
-
 
 .dashboard {
   position: relative;
   width: 100%;
-  min-height: calc(100vh - 60px);
+  min-height: calc(100vh - 110px);
 }
 
 .chart-container {
@@ -269,7 +287,7 @@ body {
   width: calc(100% - 20px);
   height: calc(100% - 20px);
   z-index: 2;
-  cursor: pointer;
+  cursor: move;
 }
 
 .chart-container:hover {
@@ -294,6 +312,47 @@ body {
   width: 100%;
   text-align: center;
   font-size: 18px;
+}
+
+.chart-container-viewer {
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  box-sizing: border-box;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.3s;
+  z-index: 1;
+}
+
+.chart-container-viewer img {
+  border-radius: 5px;
+}
+
+.chart-container-viewer .paragraph {
+  padding: 0 10px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.chart-container-viewer > .keen-dataviz {
+  overflow: hidden;
+  width: 98%;
+  margin-top: 10px;
+}
+
+.chart-container-viewer .chart-title {
+  height: 40px;
+  width: 100%;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
 }
 
 .resizers {
@@ -496,6 +555,8 @@ body {
   height: 100%;
   transition: box-shadow 0.3s;
   color: #000;
+  padding: 10px;
+  text-align: center;
 }
 
 .dashboard-list-item-buttons {
@@ -569,17 +630,15 @@ body {
   cursor: pointer;
   transition: 0.3s;
   width: 80px;
+  height: 31px;
   margin-right: 20px;
   text-align: center;
   color: #fff;
-  background: rgb(33, 156, 64);
-  border: 1px solid rgb(33, 156, 64);
+  background: rgb(0, 140, 222);
 }
 
-.save-dashboard-button:hover {
-  color: rgb(33, 156, 64);
-  border: 1px solid rgb(33, 156, 64);
-  background: none;
+.save-dashboard-button svg {
+  margin-right: 0.3rem;
 }
 
 .dashboard-saved-message {
@@ -649,17 +708,20 @@ body {
   background: #fff;
   box-shadow: -3px -3px 6px #eee;
   position: relative;
+  overflow-y: auto;
 }
 
-.settings-container .keen-theme-builder .color-palette__list .color-picker__popover {
+.settings-container
+  .keen-theme-builder
+  .color-palette__list
+  .color-picker__popover {
   right: 0;
   left: auto;
 }
 
 .settings {
   width: 300px;
-  height: 100%;
-  padding: 15px;
+  height: 100vh;
   box-sizing: border-box;
 }
 
@@ -706,13 +768,12 @@ body {
 .react-tabs__tab {
   width: 50%;
   padding: 10px;
-  border: 1px solid hsl(0, 0%, 80%);
   text-align: center;
-  border-radius: 5px 5px 0 0;
   cursor: pointer;
-  color: hsl(0, 0%, 80%);
+  color: #fff;
   outline: none;
-  background: #eee;
+  border: 0;
+  background: #008cde;
 }
 
 .react-tabs__tab:hover {
@@ -729,12 +790,23 @@ body {
   border-right: none;
 }
 
+.react-tabs__tab-panel {
+  border: 0;
+}
+
 .react-tabs__tab-panel--selected {
   padding: 10px 20px 20px 20px;
-  border: 1px solid hsl(0, 0%, 80%);
-  border-top: none;
-  border-radius: 0 0 5px 5px;
+  border: 0;
   visibility: visible;
+  overflow-y: auto;
+}
+
+.react-tabs__tab-panel--selected .keen-theme-builder {
+  padding: 0;
+}
+
+#react-tabs-3 {
+  padding: 0;
 }
 
 .switch-dashboard {
@@ -744,6 +816,14 @@ body {
   background: #fff;
   border-bottom-right-radius: 20px;
   z-index: 1000;
+}
+
+.__react_component_tooltip {
+  padding: 3px 5px;
+}
+
+.builder__config {
+  padding: 0.5rem 0 0 0;
 }
 
 @media only screen and (max-width: 1300px) {
@@ -762,7 +842,7 @@ body {
   }
 
   .dashboard-container {
-    padding-left: 180px;
+    padding-left: 150px;
   }
 }
 

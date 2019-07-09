@@ -24,7 +24,7 @@
     "type": "git",
     "url": "https://github.com/keen/dashboard-builder.git"
   },
-  "bugs": "hhttps://github.com/keen/dashboard-builder/issues",
+  "bugs": "https://github.com/keen/dashboard-builder/issues",
   "author": "Keen.IO <team@keen.io> (https://keen.io/)",
   "contributors": [
     "Dariusz Łacheta <dariusz.lacheta@keen.io> (https://github.com/dariuszlacheta)"
