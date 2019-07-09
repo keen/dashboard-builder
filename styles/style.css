@@ -15,12 +15,14 @@ body {
 
 .dashboard-top-bar {
   height: 50px;
-  width: 100%;
+  width: calc(100% - 350px);
   background: #f9f9f9;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
+  position: absolute;
+  top: 0;
 }
 
 .toolbar {
@@ -114,6 +116,7 @@ body {
   overflow: auto;
   min-height: 100vh;
   padding-left: 60px;
+  margin-top: 50px;
 }
 
 .dashboard-container-viewer {
@@ -239,10 +242,16 @@ body {
   }
 }
 
-.dashboard {
+.dashboard-container .dashboard-inner-container .dashboard {
   position: relative;
   width: 100%;
-  min-height: calc(100vh - 110px);
+  min-height: calc(100vh - 130px);
+}
+
+.dashboard-container-viewer .dashboard-inner-container .dashboard {
+  position: relative;
+  width: 100%;
+  min-height: calc(100vh - 80px);
 }
 
 .chart-container {
@@ -752,6 +761,10 @@ body {
   outline: none;
 }
 
+.settings-chart {
+  padding: 10px;
+}
+
 .quill {
   height: 70%;
 }
@@ -805,7 +818,7 @@ body {
   padding: 0;
 }
 
-#react-tabs-3 {
+.settings-theme-builder {
   padding: 0;
 }
 
@@ -828,7 +841,7 @@ body {
 
 @media only screen and (max-width: 1300px) {
   .dashboard {
-    min-height: calc(100vh - 75px);
+    min-height: calc(100vh - 110px);
   }
 }
 
@@ -843,6 +856,10 @@ body {
 
   .dashboard-container {
     padding-left: 150px;
+  }
+
+  .dashboard-top-bar {
+    width: calc(100% - 450px);
   }
 }
 
