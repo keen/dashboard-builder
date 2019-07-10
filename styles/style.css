@@ -114,7 +114,6 @@ body {
 .dashboard-container {
   width: 100%;
   overflow: auto;
-  min-height: 100vh;
   padding-left: 60px;
   margin-top: 50px;
 }
@@ -122,7 +121,6 @@ body {
 .dashboard-container-viewer {
   width: 100%;
   overflow: auto;
-  min-height: 100vh;
 }
 
 .dashboard-inner-container {
@@ -277,6 +275,11 @@ body {
   padding: 0 10px;
   box-sizing: border-box;
   overflow: hidden;
+  width: 100%;
+}
+
+.chart-container .paragraph p {
+  margin: 0;
 }
 
 .chart-container > .keen-dataviz {
@@ -346,6 +349,11 @@ body {
   padding: 0 10px;
   box-sizing: border-box;
   overflow: hidden;
+  width: 100%;
+}
+
+.chart-container-viewer .paragraph p {
+  margin: 0;
 }
 
 .chart-container-viewer > .keen-dataviz {
@@ -617,11 +625,24 @@ body {
   border-bottom-right-radius: 5px;
 }
 
-.save-query-message {
-  z-index: 5;
+.error-message {
+  z-index: 1;
   background: #fff;
-  padding: 5px;
+  padding: 20px;
   text-align: center;
+  color: red;
+  border: 1px solid red;
+  border-radius: 5px;
+}
+
+.dry-run-message {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 1rem;
+  background: #6f6f6fa8;
+  color: #fff;
+  border-radius: 0 1rem 0 0;
 }
 
 .select-palette-button select {
@@ -661,13 +682,13 @@ body {
   border-radius: 5px;
 }
 
-.share a {
-  font-size: 20px;
+.preview a {
+  font-size: 30px;
   padding: 10px 20px;
   color: #000;
 }
 
-.share:hover a {
+.preview:hover a {
   color: rgb(65, 65, 65);
 }
 
@@ -717,6 +738,7 @@ body {
   background: #fff;
   box-shadow: -3px -3px 6px #eee;
   position: relative;
+  z-index: 1000;
 }
 
 .settings-container
@@ -821,10 +843,6 @@ body {
 
 .switch-dashboard {
   width: 400px;
-  margin-top: 5px;
-  padding: 20px;
-  background: #fff;
-  border-bottom-right-radius: 20px;
   z-index: 1000;
 }
 
@@ -838,7 +856,7 @@ body {
 
 @media only screen and (max-width: 1300px) {
   .dashboard {
-    min-height: calc(100vh - 110px);
+    min-height: calc(100vh - 130px);
   }
 }
 
