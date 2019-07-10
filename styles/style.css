@@ -163,7 +163,7 @@ body {
   color: #008cde;
 }
 
-.editor-dashboard-switch {
+.modal {
   position: absolute;
   background: #fff;
   box-sizing: border-box;
@@ -178,7 +178,7 @@ body {
   animation: fadeIn 0.3s;
 }
 
-.editor-dashboard-switch .header {
+.modal-header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -187,26 +187,26 @@ body {
   font-size: 17px;
 }
 
-.editor-dashboard-switch .body {
+.modal-body {
   max-height: 300px;
   overflow: auto;
 }
 
-.editor-dashboard-switch .body div {
+.modal-body div {
   padding: 10px;
   border-bottom: 1px solid #eee;
 }
 
-.editor-dashboard-switch .body div:hover {
+.modal-body div:hover {
   background: rgb(243, 243, 243);
 }
 
-.editor-dashboard-switch .body div .active {
+.modal-body div .active {
   color: rgb(49, 148, 179);
   padding-right: 5px;
 }
 
-.editor-dashboard-switch .footer {
+.modal-footer {
   padding: 10px;
 }
 
