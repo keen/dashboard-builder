@@ -25,6 +25,14 @@ body {
   top: 0;
 }
 
+.dashboard-top-bar .share {
+  position: relative;
+}
+
+.dashboard-top-bar .share .svg-inline--fa {
+  font-size: 1.25em;
+}
+
 .dashboard-top-bar .share,
 .dashboard-top-bar .modal-header .svg-inline--fa {
   cursor: pointer;
@@ -126,11 +134,10 @@ body {
 .dashboard-container-viewer {
   width: 100%;
   overflow: auto;
+  margin-top: 50px;
 }
 
 .dashboard-inner-container {
-  width: 1200px;
-  min-width: 1200px;
   background: #fdfdfd;
   margin: auto;
 }
@@ -250,16 +257,11 @@ body {
   }
 }
 
-.dashboard-container .dashboard-inner-container .dashboard {
+.dashboard {
   position: relative;
   width: 100%;
   min-height: calc(100vh - 130px);
-}
-
-.dashboard-container-viewer .dashboard-inner-container .dashboard {
-  position: relative;
-  width: 100%;
-  min-height: calc(100vh - 80px);
+  padding: 20px;
 }
 
 .chart-container {
@@ -341,7 +343,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
   box-sizing: border-box;
   border: 1px solid #eee;
   border-radius: 5px;
@@ -702,6 +703,37 @@ body {
   color: rgb(65, 65, 65);
 }
 
+.screen-resize-icon {
+  position: absolute;
+  left: 48%;
+  width: 100px;
+  display: flex;
+  justify-content: space-between;
+  color: #6f6f6fa8;
+  align-items: center;
+}
+
+.screen-resize-icon svg {
+  cursor: pointer;
+}
+
+.screen-resize-icon svg:first-child {
+  font-size: 20px;
+  margin-top: 2px;
+}
+
+.screen-resize-icon svg:nth-child(2) {
+  font-size: 25px;
+}
+
+.screen-resize-icon svg:last-child {
+  font-size: 25px;
+}
+
+.screen-resize-icon svg:hover {
+  color: #000;
+}
+
 .edit-dashboard-button {
   border-radius: 5px;
   padding: 5px;
@@ -864,6 +896,10 @@ body {
   padding: 0.5rem 0 0 0;
 }
 
+.dashboard-container-viewer .dashboard-top-bar {
+  width: 100%;
+}
+
 @media only screen and (max-width: 1300px) {
   .dashboard {
     min-height: calc(100vh - 130px);
@@ -883,7 +919,7 @@ body {
     padding-left: 150px;
   }
 
-  .dashboard-top-bar {
+  .dashboard-container .dashboard-top-bar {
     width: calc(100% - 450px);
   }
 }
