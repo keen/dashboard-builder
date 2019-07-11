@@ -25,6 +25,11 @@ body {
   top: 0;
 }
 
+.dashboard-top-bar .share,
+.dashboard-top-bar .modal-header .svg-inline--fa {
+  cursor: pointer;
+}
+
 .toolbar {
   position: fixed;
   left: 0;
@@ -206,11 +211,16 @@ body {
   padding-right: 5px;
 }
 
+.modal-body .modal-input {
+  padding: 8px 4px;
+  width: 100%;
+}
+
 .modal-footer {
   padding: 10px;
 }
 
-.editor-dashboard-switch-black {
+.modal-cover {
   width: 100%;
   height: 100%;
   opacity: 0.4;
