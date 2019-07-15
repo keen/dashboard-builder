@@ -341,6 +341,7 @@ body {
   flex-direction: column;
   transition: box-shadow 0.3s;
   z-index: 1;
+  position: static;
 }
 
 .chart-container-viewer img {
