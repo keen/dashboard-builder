@@ -33,6 +33,10 @@ body {
   font-size: 1.25em;
 }
 
+.share-dashboard .modal-header .svg-inline--fa {
+  font-size: 1rem;
+}
+
 .dashboard-top-bar .share,
 .dashboard-top-bar .modal-header .svg-inline--fa {
   cursor: pointer;
@@ -194,6 +198,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   padding: 15px;
   border-bottom: 1px solid #eee;
   font-size: 17px;
@@ -798,9 +803,8 @@ body {
   min-width: 300px;
   min-height: 100%;
   background: #fff;
-  box-shadow: -3px -3px 6px #eee;
+  border-left: 1px solid #eee;
   position: relative;
-  z-index: 1000;
 }
 
 .settings-container
@@ -809,10 +813,6 @@ body {
   .color-picker__popover {
   right: 0;
   left: auto;
-}
-
-.keen-theme-builder .builder__header {
-  font-size: 1rem;
 }
 
 .settings {
