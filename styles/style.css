@@ -224,7 +224,17 @@ body {
 
 .modal-body .modal-input {
   padding: 8px 4px;
+  margin-bottom: 0.5em;
   width: 100%;
+}
+
+.modal-button {
+  border-radius: 5px;
+  padding: 5px 15px;
+  cursor: pointer;
+  color: #fff;
+  background: rgb(0, 140, 222);
+  border: none;
 }
 
 .modal-footer {
