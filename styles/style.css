@@ -929,10 +929,6 @@ body {
   .dashboard-container {
     padding-left: 150px;
   }
-
-  .dashboard-container .dashboard-top-bar {
-    width: calc(100% - 450px);
-  }
 }
 
 .keen-theme-builder .color-picker__popover {
