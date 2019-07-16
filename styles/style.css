@@ -191,7 +191,6 @@ body {
   font-size: 14px;
   width: 250px;
   box-shadow: -6px 6px 8px 0 rgba(0, 0, 0, 0.23);
-  animation: fadeIn 0.3s;
 }
 
 .modal-header {
@@ -255,25 +254,6 @@ body {
   top: 0;
   left: 0;
   z-index: 1000;
-  animation: fadeInBlack 0.3s;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeInBlack {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 0.4;
-  }
 }
 
 .dashboard {
@@ -575,10 +555,11 @@ body {
   display: flex;
   flex-direction: row;
   font-size: 15px;
+  align-items: center;
 }
 
 .search svg {
-  margin: 9px 5px 0 0;
+  margin-right: 10px;
 }
 
 .search input {
@@ -947,10 +928,6 @@ body {
 
   .dashboard-container {
     padding-left: 150px;
-  }
-
-  .dashboard-container .dashboard-top-bar {
-    width: calc(100% - 450px);
   }
 }
 
