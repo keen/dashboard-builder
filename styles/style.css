@@ -25,6 +25,23 @@ body {
   top: 0;
 }
 
+.dashboard-top-bar .share {
+  position: relative;
+}
+
+.dashboard-top-bar .share .svg-inline--fa {
+  font-size: 1.25em;
+}
+
+.share-dashboard .modal-header .svg-inline--fa {
+  font-size: 1rem;
+}
+
+.dashboard-top-bar .share,
+.dashboard-top-bar .modal-header .svg-inline--fa {
+  cursor: pointer;
+}
+
 .toolbar {
   position: fixed;
   left: 0;
@@ -162,7 +179,7 @@ body {
   color: #008cde;
 }
 
-.editor-dashboard-switch {
+.modal {
   position: absolute;
   background: #fff;
   box-sizing: border-box;
@@ -176,43 +193,59 @@ body {
   box-shadow: -6px 6px 8px 0 rgba(0, 0, 0, 0.23);
 }
 
-.editor-dashboard-switch .header {
+.modal-header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   padding: 15px;
   border-bottom: 1px solid #eee;
   font-size: 17px;
 }
 
-.editor-dashboard-switch .body {
+.modal-body {
   max-height: 300px;
   overflow: auto;
 }
 
-.editor-dashboard-switch .body div {
+.modal-body div {
   padding: 1rem;
   border-bottom: 1px solid #eee;
 }
 
-.editor-dashboard-switch .body div:hover {
+.modal-body div:hover {
   background: rgb(243, 243, 243);
 }
 
-.editor-dashboard-switch .body .active {
+.modal-body .active {
   background: #f9f9f9;
 }
 
-.editor-dashboard-switch .body .active .fa-angle-double-right {
+.modal-body .active .fa-angle-double-right {
   color: rgb(49, 148, 179);
   padding-right: 5px;
 }
 
-.editor-dashboard-switch .footer {
+.modal-body .modal-input {
+  padding: 8px 4px;
+  margin-bottom: 0.5em;
+  width: 100%;
+}
+
+.modal-button {
+  border-radius: 5px;
+  padding: 5px 15px;
+  cursor: pointer;
+  color: #fff;
+  background: rgb(0, 140, 222);
+  border: none;
+}
+
+.modal-footer {
   padding: 10px;
 }
 
-.editor-dashboard-switch-black {
+.modal-cover {
   width: 100%;
   height: 100%;
   opacity: 0.4;
@@ -750,9 +783,8 @@ body {
   min-width: 300px;
   min-height: 100%;
   background: #fff;
-  box-shadow: -3px -3px 6px #eee;
+  border-left: 1px solid #eee;
   position: relative;
-  z-index: 1000;
 }
 
 .settings-container
@@ -761,10 +793,6 @@ body {
   .color-picker__popover {
   right: 0;
   left: auto;
-}
-
-.keen-theme-builder .builder__header {
-  font-size: 1rem;
 }
 
 .settings {
