@@ -12,7 +12,8 @@ export const oldDashboards = [
             column_width: 12,
             query_name: "mobile-sales"
           }
-        ]
+        ],
+        title: "Highcharts Demo"
       },
       {
         height: 280,
@@ -29,7 +30,8 @@ export const oldDashboards = [
             column_width: 4,
             query_name: "pie-chart-mobile"
           }
-        ]
+        ],
+        title: "New Demo"
       }
     ],
     title: "sdfsdf"
@@ -60,7 +62,8 @@ export const oldDashboards = [
             column_width: 8,
             query_name: "games-purchases"
           },
-        ]
+        ],
+        title: "Mobile Demo"
       }
     ],
     title: "Untitledxcvxcvxcv"
