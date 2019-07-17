@@ -690,13 +690,13 @@ body {
 
 .dashboard-saved-message {
   position: absolute;
-  top: 0;
+  top: 0.5rem;
   left: 45%;
-  padding: 20px;
-  background: rgb(125, 211, 147);
-  border: 1px solid rgb(57, 211, 96);
-  color: #fff;
+  padding: 0.5rem 1rem;
   border-radius: 5px;
+  background: #333;
+  color: #fff;
+  font-size: 0.85rem;
 }
 
 .preview a {
