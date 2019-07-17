@@ -256,6 +256,13 @@ body {
   z-index: 1000;
 }
 
+.share-dashboard.modal {
+  width: 500px;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 .dashboard {
   position: relative;
   width: 100%;
@@ -697,6 +704,7 @@ body {
   background: #333;
   color: #fff;
   font-size: 0.85rem;
+  z-index: 1001;
 }
 
 .preview a {
