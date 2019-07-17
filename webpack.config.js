@@ -16,23 +16,35 @@ switch (process.env.NODE_ENV) {
     switch (process.env.component) {
       case 'builder':
         entry = './lib/builder/index.js';
+        alias = {
+          Client: path.resolve(__dirname, 'lib/builder/')
+        }
         break;
       case 'viewer':
         entry = './lib/viewer/index.js';
+        alias = {
+          Client: path.resolve(__dirname, 'lib/viewer/')
+        }
         break;
     
       default:
         entry = './lib/index.js';
+        alias = {
+          Client: path.resolve(__dirname, 'lib/')
+        }
         break;
     }
     break;
 
   default:
     entry = './lib/index.js';
+    alias = {
+      Client: path.resolve(__dirname, 'lib/')
+    }
     break;
 }
 
-
+console.log(path.resolve(__dirname, 'lib/'))
 
 module.exports = {
   entry,
@@ -87,6 +99,7 @@ module.exports = {
       'node_modules',
     ],
     extensions: ['.js', '.json', '.jsx'],
+    alias,
   },
 
   optimization: {

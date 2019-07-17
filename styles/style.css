@@ -93,7 +93,7 @@ body {
 }
 
 .toolbar-hidden {
-  width: 150px;
+  width: 90px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -942,7 +942,7 @@ body {
   }
 
   .dashboard-container {
-    padding-left: 150px;
+    padding-left: 90px;
   }
 }
 
