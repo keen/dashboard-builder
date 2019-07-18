@@ -8,6 +8,7 @@ body {
   display: flex;
   justify-content: center;
   background: #f9f9f9;
+  color: #000;
   height: 100vh;
   overflow: hidden;
   position: relative;
@@ -32,7 +33,7 @@ body {
 }
 
 .dashboard-top-bar .share .svg-inline--fa {
-  font-size: 1.25em;
+  font-size: 1.25rem;
 }
 
 .share-dashboard .modal-header .svg-inline--fa {
@@ -78,6 +79,7 @@ body {
   position: absolute;
   top: 90px;
   left: 15px;
+  color: #fff;
 }
 
 .toolbar-container {
@@ -713,7 +715,8 @@ body {
   color: #000;
 }
 
-.preview:hover a {
+.preview:hover a,
+.share-icon:hover {
   color: rgb(65, 65, 65);
 }
 

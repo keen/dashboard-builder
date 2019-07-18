@@ -7,8 +7,8 @@
   "scripts": {
     "start": "concurrently --kill-others \"NODE_ENV=development webpack-dev-server\"",
     "build": "NODE_ENV=production OPTIMIZE_MINIMIZE=1 webpack -p && npm run build:css && npm run build:css:min",
-    "build:css": "node_modules/postcss-cli/bin/postcss lib/styles/style.css -o dist/style.css --config postcss.config.js",
-    "build:css:min": "OPTIMIZE_MINIMIZE=1 node_modules/postcss-cli/bin/postcss lib/styles/style.css -o dist/style.min.css --config postcss.config.js",
+    "build:css": "node_modules/postcss-cli/bin/postcss styles/style.css -o dist/style.css --config postcss.config.js",
+    "build:css:min": "OPTIMIZE_MINIMIZE=1 node_modules/postcss-cli/bin/postcss styles/style.css -o dist/style.min.css --config postcss.config.js",
     "build:gh-pages": "NODE_ENV=development webpack --mode development",
     "preversion": "npm run test",
     "version": "npm run build && git add .",
