@@ -44,8 +44,6 @@ switch (process.env.NODE_ENV) {
     break;
 }
 
-console.log(path.resolve(__dirname, 'lib/'))
-
 module.exports = {
   entry,
 
