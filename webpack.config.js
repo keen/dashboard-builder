@@ -3,6 +3,9 @@ const webpack = require('webpack');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 
 const extendedPath = path.resolve(__dirname, 'dist');
+let alias = {
+  Client: path.resolve(__dirname, 'lib/')
+};
 
 switch (process.env.NODE_ENV) {
   case 'production':

@@ -45,6 +45,7 @@ body {
 
 .share-dashboard .modal-header .svg-inline--fa {
   font-size: 1rem;
+  cursor: pointer;
 }
 
 .dashboard-top-bar .share,
@@ -110,7 +111,7 @@ body {
 }
 
 .toolbar-hidden {
-  width: 150px;
+  width: 90px;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: row;
@@ -1075,7 +1076,7 @@ body {
   }
 
   .dashboard-container {
-    padding-left: 150px;
+    padding-left: 90px;
   }
 }
 
