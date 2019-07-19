@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Keen dashboard builder</title>
+  </head>
+
+  <body>
+    <div id="app"></div>
+    <script>
+    window.addEventListener('load', () => {
+      const myDashboardBuilder = new DashboardBuilder({
+        container: "#app",
+        keenAnalysis: {
+          config: {
+            projectId: "5c87b64ec9e77c0001cf5b6e",
+            masterKey:
+              "585B781C4281234B90282FEDDF7440FA42A06455AEEAE4283F09DD95A278155F"
+          }
+        }
+      });
+    });
+    </script>
+  </body>
+</html>
