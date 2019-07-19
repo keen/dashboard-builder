@@ -10,7 +10,6 @@
     "build:css": "node_modules/postcss-cli/bin/postcss styles/style.css -o dist/style.css --config postcss.config.js",
     "build:css:min": "OPTIMIZE_MINIMIZE=1 node_modules/postcss-cli/bin/postcss styles/style.css -o dist/style.min.css --config postcss.config.js",
     "build:gh-pages": "NODE_ENV=development webpack --mode development",
-    "preversion": "npm run test",
     "version": "npm run build && git add .",
     "postversion": "git push && git push --tags",
     "builder": "concurrently --kill-others \"NODE_ENV=development component=builder webpack-dev-server\"",
