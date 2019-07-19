@@ -38,6 +38,7 @@ body {
 
 .share-dashboard .modal-header .svg-inline--fa {
   font-size: 1rem;
+  cursor: pointer;
 }
 
 .dashboard-top-bar .share,
@@ -46,7 +47,7 @@ body {
 }
 
 .toolbar {
-  position: fixed;
+  position: absolute;
   left: 0;
   top: 0;
   width: 60px;
@@ -182,6 +183,7 @@ body {
 }
 
 .modal {
+  display: block;
   position: absolute;
   background: #fff;
   box-sizing: border-box;
@@ -190,6 +192,8 @@ body {
   z-index: 1001;
   top: 0;
   left: 20px;
+  right: auto;
+  bottom: auto;
   font-size: 14px;
   width: 250px;
   box-shadow: -6px 6px 8px 0 rgba(0, 0, 0, 0.23);
@@ -961,3 +965,12 @@ body {
   z-index: 1000;
 }
 
+label {
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
+}
+
+label input {
+  margin-right: 1em;
+}
