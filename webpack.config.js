@@ -116,7 +116,7 @@ module.exports = {
     minimize: !!process.env.OPTIMIZE_MINIMIZE,
   },
 
-  devtool: 'source-map',
+  // devtool: 'source-map',
 
   context: __dirname,
 
