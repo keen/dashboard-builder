@@ -9,9 +9,13 @@ let alias = {
 
 switch (process.env.NODE_ENV) {
   case 'production':
-    entry = {
-      main: './lib/builder/index.js',
-      viewer:  './lib/viewer/index.js'
+    // entry = {
+    //   main: './lib/builder/index.js',
+    //  viewer:  './lib/viewer/index.js'
+    // }
+    entry = './lib/index.js';
+    alias = {
+      Client: path.resolve(__dirname, 'lib/')
     }
     break;
 
