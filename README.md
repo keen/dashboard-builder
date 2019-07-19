@@ -20,15 +20,16 @@ https://keen.github.io/dashboard-builder/
 ## Example
 
 ```javascript
-      const myDashboardBuilder = new DashboardBuilder({
-        container: "#app-container",
-        keenAnalysis: {
-          config: {
-            projectId: 'YOUR_PROJECT_ID',
-            masterKey: 'YOUR_MASTER_KEY',
-            protocol: 'https',
-            host: 'api.keen.io'
-          }
-        }
-      });
+const myDashboardBuilder = new DashboardBuilder({
+  container: "#app-container",
+  keenAnalysis: {
+    config: {
+      projectId: 'YOUR_PROJECT_ID',
+      masterKey: 'YOUR_MASTER_KEY',
+      protocol: 'https',
+      host: 'api.keen.io'
+    }
+  },
+  keenWebHost: 'keen.io' // optional, the default is window.location.host
+});
 ```
