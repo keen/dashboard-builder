@@ -2,7 +2,7 @@ body {
   margin: 0;
 }
 
-#app {
+#app, #explorer-tab-1-content {
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   display: -ms-flexbox;
@@ -54,7 +54,7 @@ body {
 }
 
 .toolbar {
-  position: fixed;
+  position: absolute;
   left: 0;
   top: 0;
   width: 60px;
@@ -1061,6 +1061,7 @@ body {
 
 .dashboard-container-viewer .dashboard-top-bar {
   width: 100%;
+  z-index: 10;
 }
 
 @media only screen and (max-width: 1300px) {
