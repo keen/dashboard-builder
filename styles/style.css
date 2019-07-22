@@ -551,19 +551,20 @@ body {
   border-bottom: 1px solid rgb(207, 207, 207);
 }
 
-.new-dashboard-button {
+.new-dashboard-button, .new-dashboard-button:hover {
   border-radius: 5px;
   /* border: 1px solid rgb(49, 148, 179); */
   padding: 1rem;
   cursor: pointer;
   color: #fff;
-  transition: 0.3s;
   background: #2f97b9;
 }
 
-.new-dashboard-button:hover {
-  color: #fff;
-  background: rgb(49, 148, 179);
+.new-dashboard-button-fake{
+  text-align: left;
+  svg{
+    margin-right: 0.5rem;
+  }
 }
 
 .search {
