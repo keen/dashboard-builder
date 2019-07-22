@@ -1061,6 +1061,7 @@ body {
 
 .dashboard-container-viewer .dashboard-top-bar {
   width: 100%;
+  z-index: 10;
 }
 
 @media only screen and (max-width: 1300px) {
