@@ -979,6 +979,7 @@ label input {
 
 .label-with-checkbox {
   cursor: pointer;
+  width: 100%;
   input {
     margin: 0 0.5rem 0 0;
   }
