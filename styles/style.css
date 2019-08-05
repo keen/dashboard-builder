@@ -745,10 +745,6 @@ body {
       border-bottom: none;
       background: #fff;
       border-top: 1px solid #eee;
-
-      .keen-theme-builder {
-        padding: 0;
-      }
     }
 
     &-list {
@@ -769,6 +765,10 @@ body {
         visibility: visible;
         height: calc(100vh - 40px);
         overflow-y: auto;
+
+        .keen-theme-builder {
+          padding: 0;
+        }
       }
     }
   }
@@ -979,10 +979,6 @@ body {
 
   .__react_component_tooltip {
     padding: 3px 5px;
-  }
-
-  .builder__config {
-    padding: 0.5rem 0 0 0;
   }
 
   .label-with-checkbox {
