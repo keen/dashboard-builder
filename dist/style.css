@@ -1102,6 +1102,7 @@ label input {
 
 .label-with-checkbox {
   cursor: pointer;
+  width: 100%;
 }
 
 .label-with-checkbox input {
