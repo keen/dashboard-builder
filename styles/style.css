@@ -982,7 +982,7 @@ body {
   }
 
   .label-with-checkbox {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     line-height: 1;
     cursor: pointer;
