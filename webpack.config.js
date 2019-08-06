@@ -9,15 +9,26 @@ let alias = {
 
 switch (process.env.NODE_ENV) {
   case 'production':
-    // entry = {
-    //   main: './lib/builder/index.js',
-    //  viewer:  './lib/viewer/index.js'
-    // }
-    entry = './lib/index.js';
-    alias = {
-      Client: path.resolve(__dirname, 'lib/')
-    }
-    break;
+  switch (process.env.component) {
+    case 'builder':
+      entry = {
+        main: './lib/index.js'
+      };
+      alias = {
+        Client: path.resolve(__dirname, 'lib/')
+      }
+      name = 'main'
+      break;
+    case 'viewer':
+      entry = {
+        viewer: './lib/viewer/index.js'
+      }
+      alias = {
+        Client: path.resolve(__dirname, 'lib/viewer/')
+      }
+      name = 'viewer'
+      break;
+  }
 
   case 'development':
     switch (process.env.component) {
@@ -26,12 +37,14 @@ switch (process.env.NODE_ENV) {
         alias = {
           Client: path.resolve(__dirname, 'lib/builder/')
         }
+        name = 'main'
         break;
       case 'viewer':
         entry = './lib/viewer/index.js';
         alias = {
           Client: path.resolve(__dirname, 'lib/viewer/')
         }
+        name = 'viewer'
         break;
     
       default:
@@ -39,6 +52,7 @@ switch (process.env.NODE_ENV) {
         alias = {
           Client: path.resolve(__dirname, 'lib/')
         }
+        name = 'main'
         break;
     }
     break;
@@ -58,7 +72,7 @@ module.exports = {
 
   output: {
     path: extendedPath,
-    filename: `[name]${
+    filename: `${name}${
       process.env.OPTIMIZE_MINIMIZE ? '.min' : ''
     }.js`,
     library: `${!process.env.LIBRARY ? '' : process.env.LIBRARY}`,
@@ -120,11 +134,11 @@ module.exports = {
     minimize: !!process.env.OPTIMIZE_MINIMIZE,
   },
 
-  // devtool: 'source-map',
+  //devtool: 'source-map',
 
   context: __dirname,
 
-  // stats: 'verbose',
+  //stats: 'verbose',
 
   mode: process.env.NODE_ENV,
 
