@@ -258,6 +258,11 @@ body {
         justify-content: center;
         background: #fff;
       }
+
+      .metric-chart-icon {
+        font-size: 20px;
+        font-weight: 600;
+      }
     }
 
     &-visible {
