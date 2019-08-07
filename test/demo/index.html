@@ -11,15 +11,30 @@
     <div id="app"></div>
     <script>
     window.addEventListener('load', () => {
+      const dashboardInfo = {"created_date": "Mon, 22 Jul 2019 13:28:37 GMT", "data": {"items": [{"chartTitle": "mon123", "colors": [], "error": false, "height": 300, "left": 20, "legend": {"label": "Right", "value": "right"}, "palette": "", "savedQuery": [{"label": "pageviews-full-mont", "value": "pageviews-full-mont"}], "sparkline": {"label": "No", "value": false}, "stacking": {"label": "None", "value": ""}, "top": 20, "type": "line", "width": 500}], "version": 2}, "id": "5d35ba05c8f5360017cf7b08", "is_public": true, "last_modified_date": "Fri, 02 Aug 2019 15:03:13 GMT", "project_id": "57856dd7ae574d605105ad75", "rows": [], "settings": {"dryRun": false, "palette": {"label": "Default", "value": ""}}, "title": "money1 public"};
+      // const myDashboardBuilder = new DashboardBuilder({
+      //   container: "#app",
+      //   keenAnalysis: {
+      //     config: {
+      //       projectId: "5c87b64ec9e77c0001cf5b6e",
+      //       masterKey:
+      //         "585B781C4281234B90282FEDDF7440FA42A06455AEEAE4283F09DD95A278155F"
+      //     }
+      //   },
+      //   keenWebHost: "staging.keen.io"
+      // });
       const myDashboardBuilder = new DashboardBuilder({
         container: "#app",
-        keenAnalysis: {
-          config: {
-            projectId: "5c87b64ec9e77c0001cf5b6e",
-            masterKey:
-              "585B781C4281234B90282FEDDF7440FA42A06455AEEAE4283F09DD95A278155F"
-          }
-        },
+        editable: false,
+        switcherEnabled: false,
+        dashboardInfo,
+        // keenAnalysis: {
+        //   config: {
+        //     projectId: "5c87b64ec9e77c0001cf5b6e",
+        //     masterKey:
+        //       "585B781C4281234B90282FEDDF7440FA42A06455AEEAE4283F09DD95A278155F"
+        //   }
+        // },
         keenWebHost: "staging.keen.io"
       });
     });
