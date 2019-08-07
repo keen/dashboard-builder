@@ -7,6 +7,8 @@ let alias = {
   Client: path.resolve(__dirname, 'lib/')
 };
 
+let definePluginVars = {};
+
 if (process.env.NODE_ENV === 'development') {
   const demoConfig = require('../demo-config');
   definePluginVars = {
