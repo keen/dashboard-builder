@@ -116,7 +116,7 @@ module.exports = {
 
   plugins: [
     new HtmlWebPackPlugin({
-      template: './test/demo/index.html',
+      template: process.env.component === 'viewer' ? './test/demo/index-viewer.html' : './test/demo/index.html',
       filename: './index.html',
       title: 'Dashboard Builder'
     })
