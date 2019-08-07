@@ -449,6 +449,12 @@ body {
       z-index: 1;
       position: static;
 
+      &:hover {
+        .explorer-button {
+          visibility: visible;
+        }
+      }
+
       img {
         border-radius: 5px;
       }
@@ -508,6 +514,32 @@ body {
       &:hover {
         background: #424242;
       }
+    }
+  }
+
+  .explorer-button {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    background: #000;
+    color: #fff;
+    font-size: 15px;
+    box-sizing: border-box;
+    opacity: 0.7;
+    border-radius: 3px;
+    padding-left: 8px;
+    padding-top: 2px;
+    visibility: hidden;
+
+    & a {
+      color: #fff;
+    }
+
+    &:hover {
+      background: #424242;
     }
   }
 
@@ -787,7 +819,6 @@ body {
     position: relative;
 
     .color-palette__item {
-
       .color-picker__popover {
         left: auto;
         right: 0;
@@ -1015,16 +1046,16 @@ body {
       min-height: calc(100vh - 130px);
     }
   }
-  
+
   @media only screen and (min-width: 1800px) {
     .toolbar-bar {
       visibility: hidden;
     }
-  
+
     .toolbar-container {
       left: 0;
     }
-  
+
     .dashboard-container {
       padding-left: 90px;
     }
