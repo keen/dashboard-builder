@@ -6,7 +6,9 @@
   "main": "dist/main.js",
   "scripts": {
     "start": "concurrently --kill-others \"NODE_ENV=development webpack-dev-server\"",
-    "build": "NODE_ENV=production OPTIMIZE_MINIMIZE=1 webpack -p && npm run build:css && npm run build:css:min",
+    "build": "npm run build:viewer && npm run build:builder && npm run build:css && npm run build:css:min",
+    "build:builder": "NODE_ENV=production OPTIMIZE_MINIMIZE=1 component=builder webpack -p",
+    "build:viewer": "NODE_ENV=production OPTIMIZE_MINIMIZE=1 component=viewer webpack -p",
     "build:css": "node_modules/postcss-cli/bin/postcss styles/style.css -o dist/style.css --config postcss.config.js",
     "build:css:min": "OPTIMIZE_MINIMIZE=1 node_modules/postcss-cli/bin/postcss styles/style.css -o dist/style.min.css --config postcss.config.js",
     "build:gh-pages": "NODE_ENV=development webpack --mode development",
@@ -118,7 +120,7 @@
     "replace-in-file": "^3.4.0",
     "style-loader": "^0.20.3",
     "webpack": "^4.5.0",
-    "webpack-bundle-analyzer": "^2.11.1",
+    "webpack-bundle-analyzer": "^3.3.2",
     "webpack-cli": "^3.3.4",
     "webpack-dev-server": "^3.7.1",
     "xhr-mock": "^2.3.2"
