@@ -14,13 +14,9 @@
       const myDashboardBuilder = new DashboardBuilder({
         container: "#app",
         keenAnalysis: {
-          config: {
-            projectId: "5c87b64ec9e77c0001cf5b6e",
-            masterKey:
-              "585B781C4281234B90282FEDDF7440FA42A06455AEEAE4283F09DD95A278155F"
-          }
+          config: keenGlobals.demoConfig
         },
-        keenWebHost: "staging.keen.io"
+        keenWebHost: keenGlobals.demoConfig.host || "staging.keen.io"
       });
     });
     </script>
