@@ -615,7 +615,7 @@ body {
   }
 
   .search {
-    width: 80%;
+    width: 65%;
     height: 100%;
     display: flex;
     flex-direction: row;
@@ -634,6 +634,11 @@ body {
       outline: none;
       font-size: 20px;
     }
+  }
+
+  .sorting-select {
+    width: 200px;
+    margin-top: 15px;
   }
 
   .screen-resize-icon {
