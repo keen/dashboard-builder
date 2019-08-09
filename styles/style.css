@@ -151,6 +151,14 @@ body {
         &:hover {
           box-shadow: -6px 6px 8px 0 rgba(0, 0, 0, 0.23);
         }
+
+        time {
+          position: absolute;
+          bottom: 15px;
+          left: 20px;
+          color: rgb(170, 170, 170);
+          font-size: 12px;
+        }
       }
 
       &-buttons {
@@ -314,9 +322,16 @@ body {
       div {
         padding: 1rem;
         border-bottom: 1px solid #eee;
+        display: flex;
+        justify-content: space-between;
 
         &:hover {
           background: #f3f3f3;
+        }
+
+        time {
+          color: rgb(170, 170, 170);
+          font-size: 12px;
         }
       }
 
