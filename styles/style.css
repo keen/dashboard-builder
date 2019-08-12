@@ -151,6 +151,14 @@ body {
         &:hover {
           box-shadow: -6px 6px 8px 0 rgba(0, 0, 0, 0.23);
         }
+
+        time {
+          position: absolute;
+          bottom: 15px;
+          left: 20px;
+          color: rgb(170, 170, 170);
+          font-size: 12px;
+        }
       }
 
       &-buttons {
@@ -189,7 +197,6 @@ body {
     z-index: 1000;
 
     &-bar {
-      background: #d3d3d3;
       width: 100%;
       height: 100%;
       position: relative;
@@ -198,6 +205,7 @@ body {
       padding: 20px;
       background: #2f97b9;
       color: #fff;
+      cursor: pointer;
 
       .plus-icon {
         font-size: 20px;
@@ -224,6 +232,7 @@ body {
       box-shadow: 3px 3px 6px #eee;
       border-right: 0;
       overflow-y: auto;
+      transition: left 250ms ease-out;
     }
 
     &-hidden {
@@ -310,12 +319,19 @@ body {
       max-height: 300px;
       overflow: auto;
 
-      div {
+      .item {
         padding: 1rem;
         border-bottom: 1px solid #eee;
+        display: flex;
+        justify-content: space-between;
 
         &:hover {
           background: #f3f3f3;
+        }
+
+        .time {
+          color: rgb(170, 170, 170);
+          font-size: 12px;
         }
       }
 
@@ -446,7 +462,13 @@ body {
       flex-direction: column;
       transition: box-shadow 0.3s;
       z-index: 1;
-      position: static;
+      position: relative;
+
+      &:hover {
+        .explorer-button {
+          visibility: visible;
+        }
+      }
 
       img {
         border-radius: 5px;
@@ -507,6 +529,32 @@ body {
       &:hover {
         background: #424242;
       }
+    }
+  }
+
+  .explorer-button {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    background: #000;
+    color: #fff;
+    font-size: 15px;
+    box-sizing: border-box;
+    opacity: 0.7;
+    border-radius: 3px;
+    padding-left: 8px;
+    padding-top: 2px;
+    visibility: hidden;
+
+    & a {
+      color: #fff;
+    }
+
+    &:hover {
+      background: #424242;
     }
   }
 
@@ -614,7 +662,7 @@ body {
   }
 
   .search {
-    width: 80%;
+    width: 65%;
     height: 100%;
     display: flex;
     flex-direction: row;
@@ -633,6 +681,11 @@ body {
       outline: none;
       font-size: 20px;
     }
+  }
+
+  .sorting-select {
+    width: 200px;
+    margin-top: 15px;
   }
 
   .screen-resize-icon {
@@ -786,7 +839,6 @@ body {
     position: relative;
 
     .color-palette__item {
-
       .color-picker__popover {
         left: auto;
         right: 0;
@@ -1008,25 +1060,25 @@ body {
       font-size: 1rem;
     }
   }
-}
 
-@media only screen and (max-width: 1300px) {
-  .dashboard {
-    min-height: calc(100vh - 130px);
-  }
-}
-
-@media only screen and (min-width: 1800px) {
-  .toolbar-bar {
-    visibility: hidden;
+  @media only screen and (max-width: 1300px) {
+    .dashboard {
+      min-height: calc(100vh - 130px);
+    }
   }
 
-  .toolbar-container {
-    left: 0;
-  }
+  @media only screen and (min-width: 1800px) {
+    .toolbar-bar {
+      visibility: hidden;
+    }
 
-  .dashboard-container {
-    padding-left: 90px;
+    .toolbar-container {
+      left: 0;
+    }
+
+    .dashboard-container {
+      padding-left: 90px;
+    }
   }
 }
 

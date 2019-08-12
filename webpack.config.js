@@ -7,6 +7,15 @@ let alias = {
   Client: path.resolve(__dirname, 'lib/')
 };
 
+let definePluginVars = {};
+
+if (process.env.NODE_ENV === 'development') {
+  const demoConfig = require('../demo-config');
+  definePluginVars = {
+    webpackKeenGlobals: JSON.stringify({ demoConfig })
+  };
+}
+
 switch (process.env.NODE_ENV) {
   case 'production':
   switch (process.env.component) {
@@ -119,7 +128,8 @@ module.exports = {
       template: process.env.component === 'viewer' ? './test/demo/index-viewer.html' : './test/demo/index.html',
       filename: './index.html',
       title: 'Dashboard Builder'
-    })
+    }),
+    new webpack.DefinePlugin(definePluginVars)
   ],
 
   resolve: {
