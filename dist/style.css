@@ -175,6 +175,14 @@ body {
           box-shadow: -6px 6px 8px 0 rgba(0, 0, 0, 0.23);
 }
 
+.dashboard-builder .dashboard-list-item-box time {
+          position: absolute;
+          bottom: 15px;
+          left: 20px;
+          color: rgb(170, 170, 170);
+          font-size: 12px;
+}
+
 .dashboard-builder .dashboard-list-item-buttons {
         position: absolute;
         top: 15px;
@@ -353,11 +361,20 @@ body {
 
 .dashboard-builder .modal-body div {
         padding: 1rem;
-        border-bottom: 1px solid #eee
+        border-bottom: 1px solid #eee;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: justify;
+            justify-content: space-between
       }
 
 .dashboard-builder .modal-body div:hover {
   background: #f3f3f3;
+}
+
+.dashboard-builder .modal-body div time {
+          color: rgb(170, 170, 170);
+          font-size: 12px;
 }
 
 .dashboard-builder .modal-body .active {
