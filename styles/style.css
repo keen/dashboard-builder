@@ -315,6 +315,17 @@ body {
       font-size: 17px;
     }
 
+    .dashboards-filter {
+      padding: 0.25rem 1rem;
+      border-bottom: 1px solid #eee;
+      display: flex;
+      justify-content: space-between;
+
+      input {
+        font-size: 14px;
+      }
+    }
+
     &-body {
       max-height: 300px;
       overflow: auto;
