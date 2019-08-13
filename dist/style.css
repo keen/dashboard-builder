@@ -359,7 +359,7 @@ body {
       overflow: auto;
     }
 
-.dashboard-builder .modal-body div {
+.dashboard-builder .modal-body .item {
         padding: 1rem;
         border-bottom: 1px solid #eee;
         display: -ms-flexbox;
@@ -368,11 +368,11 @@ body {
             justify-content: space-between
       }
 
-.dashboard-builder .modal-body div:hover {
+.dashboard-builder .modal-body .item:hover {
   background: #f3f3f3;
 }
 
-.dashboard-builder .modal-body div time {
+.dashboard-builder .modal-body .item .time {
           color: rgb(170, 170, 170);
           font-size: 12px;
 }
