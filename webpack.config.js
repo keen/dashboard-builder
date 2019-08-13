@@ -73,7 +73,6 @@ switch (process.env.NODE_ENV) {
     break;
 }
 
-console.log(entry, process.env.component, process.env.NODE_ENV);
 module.exports = {
   entry,
 
