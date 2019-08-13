@@ -330,7 +330,7 @@ body {
       max-height: 300px;
       overflow: auto;
 
-      div {
+      .item {
         padding: 1rem;
         border-bottom: 1px solid #eee;
         display: flex;
@@ -340,7 +340,7 @@ body {
           background: #f3f3f3;
         }
 
-        time {
+        .time {
           color: rgb(170, 170, 170);
           font-size: 12px;
         }

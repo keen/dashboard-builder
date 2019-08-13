@@ -359,7 +359,7 @@ body {
       overflow: auto;
     }
 
-.dashboard-builder .modal-body div {
+.dashboard-builder .modal-body .item {
         padding: 1rem;
         border-bottom: 1px solid #eee;
         display: -ms-flexbox;
@@ -368,11 +368,11 @@ body {
             justify-content: space-between
       }
 
-.dashboard-builder .modal-body div:hover {
+.dashboard-builder .modal-body .item:hover {
   background: #f3f3f3;
 }
 
-.dashboard-builder .modal-body div time {
+.dashboard-builder .modal-body .item .time {
           color: rgb(170, 170, 170);
           font-size: 12px;
 }
@@ -523,12 +523,16 @@ body {
       transition: box-shadow 0.3s;
       transition: box-shadow 0.3s, -webkit-box-shadow 0.3s;
       z-index: 1;
-      position: static;
+      position: relative;
+}
+
+.dashboard-builder .chart-container-viewer:hover .explorer-button {
+          visibility: visible;
 }
 
 .dashboard-builder .chart-container-viewer img {
         border-radius: 5px;
-      }
+}
 
 .dashboard-builder .chart-container-viewer > .keen-dataviz {
   overflow: hidden;
@@ -592,6 +596,33 @@ body {
     }
 
 .dashboard-builder .config-buttons div:hover {
+  background: #424242;
+}
+
+.dashboard-builder .explorer-button {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    background: #000;
+    color: #fff;
+    font-size: 15px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    opacity: 0.7;
+    border-radius: 3px;
+    padding-left: 8px;
+    padding-top: 2px;
+    visibility: hidden;
+}
+
+.dashboard-builder .explorer-button a {
+  color: #fff;
+}
+
+.dashboard-builder .explorer-button:hover {
   background: #424242;
 }
 
@@ -697,7 +728,7 @@ body {
 }
 
 .dashboard-builder .search {
-    width: 80%;
+    width: 65%;
     height: 100%;
     display: -ms-flexbox;
     display: flex;
@@ -720,6 +751,11 @@ body {
       outline: none;
       font-size: 20px;
     }
+
+.dashboard-builder .sorting-select {
+    width: 200px;
+    margin-top: 15px;
+}
 
 .dashboard-builder .screen-resize-icon {
     position: absolute;
