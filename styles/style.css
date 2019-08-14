@@ -1059,6 +1059,11 @@ body {
     input {
       margin: 0 0.5rem 0 0;
     }
+
+    .__react_component_tooltip {
+      padding: 6px 10px;
+      margin-left: -124px
+    }
   }
 
   .keen-theme-builder {
