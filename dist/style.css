@@ -354,6 +354,19 @@ body {
       font-size: 17px;
     }
 
+.dashboard-builder .modal .dashboards-filter {
+      padding: 0.25rem 1rem;
+      border-bottom: 1px solid #eee;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+    }
+
+.dashboard-builder .modal .dashboards-filter input {
+        font-size: 14px;
+      }
+
 .dashboard-builder .modal-body {
       max-height: 300px;
       overflow: auto;
@@ -601,6 +614,7 @@ body {
 
 .dashboard-builder .explorer-button {
     position: absolute;
+    z-index: 4;
     top: 2px;
     right: 2px;
     cursor: pointer;
@@ -1124,6 +1138,11 @@ body {
 
 .dashboard-builder .label-with-checkbox input {
       margin: 0 0.5rem 0 0;
+    }
+
+.dashboard-builder .label-with-checkbox .__react_component_tooltip {
+      padding: 6px 10px;
+      margin-left: -124px
     }
 
 .dashboard-builder .keen-theme-builder {
