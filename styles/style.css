@@ -534,6 +534,7 @@ body {
 
   .explorer-button {
     position: absolute;
+    z-index: 4;
     top: 2px;
     right: 2px;
     cursor: pointer;
