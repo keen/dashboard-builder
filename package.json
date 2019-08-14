@@ -2,7 +2,7 @@
   "name": "keen-dashboard-builder",
   "description": "Dashboard builder for Keen.io",
   "license": "MIT",
-  "version": "1.0.11",
+  "version": "1.0.15",
   "main": "dist/main.js",
   "scripts": {
     "start": "concurrently --kill-others \"NODE_ENV=development webpack-dev-server\"",
@@ -13,7 +13,7 @@
     "build:css:min": "OPTIMIZE_MINIMIZE=1 node_modules/postcss-cli/bin/postcss styles/style.css -o dist/style.min.css --config postcss.config.js",
     "build:gh-pages": "NODE_ENV=development webpack --mode development",
     "version": "npm run build && git add .",
-    "postversion": "git push && git push --tags",
+    "postversion": "git push && git push --tags && npm publish",
     "builder": "concurrently --kill-others \"NODE_ENV=development component=builder webpack-dev-server\"",
     "viewer": "concurrently --kill-others \"NODE_ENV=development component=viewer webpack-dev-server\"",
     "test": "NODE_ENV=test jest",
