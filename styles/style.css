@@ -334,7 +334,7 @@ body {
         padding: 1rem;
         border-bottom: 1px solid #eee;
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
 
         &:hover {
           background: #f3f3f3;
