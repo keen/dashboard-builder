@@ -77,6 +77,7 @@ body {
       position: relative;
       display: flex;
       align-items: center;
+      justify-content: space-between;
       padding: 0.5rem;
 
       input {
@@ -335,7 +336,7 @@ body {
         padding: 1rem;
         border-bottom: 1px solid #eee;
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
 
         &:hover {
           background: #f3f3f3;
@@ -1032,15 +1033,18 @@ body {
     color: #fff;
     background: #2f97b9;
     text-decoration: none;
-    position: absolute;
-    left: 6px;
-    top: 6px;
-    margin: 0;
+    flex-shrink: 0;
+    margin: 0 0 0 0.5em;
 
-    &:hover {
-      color: #fff;
-      background: #2f97b9;
+    &__link {
+      display: block;
+      color: #ffffff;
       text-decoration: none;
+
+      &:hover {
+        color: #ffffff;
+        text-decoration: none;
+      }
     }
   }
 
