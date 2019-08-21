@@ -89,6 +89,10 @@ body {
         padding: 5px 5px 5px 0;
       }
 
+      .title {
+        padding: 20px;
+      }
+
       a {
         text-decoration: none;
       }
