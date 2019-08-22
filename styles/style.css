@@ -49,6 +49,7 @@ body {
     width: 100%;
     min-height: calc(100vh - 130px);
     padding: 20px;
+    box-sizing: border-box;
 
     &-container {
       width: 100%;
