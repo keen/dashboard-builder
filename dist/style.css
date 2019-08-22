@@ -89,6 +89,8 @@ body {
       display: flex;
       -ms-flex-align: center;
           align-items: center;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
       padding: 0.5rem;
     }
 
@@ -99,6 +101,10 @@ body {
         font-size: 30px;
         outline: none;
         padding: 5px 5px 5px 0;
+      }
+
+.dashboard-builder .dashboard-title .title {
+        padding: 20px;
       }
 
 .dashboard-builder .dashboard-title a {
@@ -126,16 +132,14 @@ body {
 
 .dashboard-builder .dashboard-top-bar .share {
         position: relative;
-        cursor: pointer;
       }
 
-.dashboard-builder .dashboard-top-bar .share .svg-inline--fa {
-          font-size: 1.25rem;
-        }
-
-.dashboard-builder .dashboard-top-bar .modal-header .svg-inline--fa {
-          cursor: pointer;
-        }
+.dashboard-builder .dashboard-top-bar .share,
+      .dashboard-builder .dashboard-top-bar .embed {
+        padding: 10px;
+        font-size: 1.25rem;
+        cursor: pointer;
+      }
 
 .dashboard-builder .dashboard-list-item {
       width: 20%;
@@ -354,6 +358,10 @@ body {
       font-size: 17px;
     }
 
+.dashboard-builder .modal-header .svg-inline--fa {
+        cursor: pointer;
+      }
+
 .dashboard-builder .modal .dashboards-filter {
       padding: 0.25rem 1rem;
       border-bottom: 1px solid #eee;
@@ -368,6 +376,7 @@ body {
       }
 
 .dashboard-builder .modal-body {
+      padding: 15px;
       max-height: 300px;
       overflow: auto;
     }
@@ -377,8 +386,8 @@ body {
         border-bottom: 1px solid #eee;
         display: -ms-flexbox;
         display: flex;
-        -ms-flex-pack: justify;
-            justify-content: space-between
+        -ms-flex-direction: column;
+            flex-direction: column
       }
 
 .dashboard-builder .modal-body .item:hover {
@@ -405,6 +414,11 @@ body {
         width: 100%;
       }
 
+.dashboard-builder .modal-body .prism {
+        margin-bottom: 40px;
+        white-space: pre-wrap;
+      }
+
 .dashboard-builder .modal-button {
       border-radius: 5px;
       padding: 5px 15px;
@@ -412,7 +426,12 @@ body {
       color: #fff;
       background: #2f97b9;
       border: none;
+      font-size: 14px;
     }
+
+.dashboard-builder .modal-button .svg-inline--fa {
+        margin-right: 0.25rem;
+      }
 
 .dashboard-builder .modal-footer {
       padding: 10px;
@@ -436,6 +455,22 @@ body {
   -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);
+}
+
+.dashboard-builder .modal.embed-dashboard {
+  width: 75%;
+  max-width: 700px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.dashboard-builder .modal.embed-dashboard .modal-button {
+        position: fixed;
+        bottom: 15px;
+        left: 15px;
 }
 
 .dashboard-builder .editor-dashboard-switch .modal-body {
@@ -815,6 +850,7 @@ body {
     width: 80px;
     height: 31px;
     margin-right: 20px;
+    margin-left: 20px;
     text-align: center;
     color: #fff;
     background: #2f97b9;
@@ -822,7 +858,7 @@ body {
 }
 
 .dashboard-builder .save-dashboard-button svg {
-      margin-right: 0.3rem;
+      margin-right: 0.25rem;
     }
 
 .dashboard-builder .settings {
@@ -946,11 +982,6 @@ body {
           right: -100%;
 }
 
-.dashboard-builder .share-dashboard .modal-header .svg-inline--fa {
-        font-size: 1rem;
-        cursor: pointer;
-      }
-
 .dashboard-builder .new-dashboard-button {
     border-radius: 5px;
     padding: 1rem;
@@ -1067,7 +1098,7 @@ body {
 
 .dashboard-builder .preview a {
     font-size: 30px;
-    padding: 10px 20px;
+    padding: 10px;
     color: #000;
 }
 
@@ -1091,15 +1122,19 @@ body {
     color: #fff;
     background: #2f97b9;
     text-decoration: none;
-    position: absolute;
-    left: 6px;
-    top: 6px;
-    margin: 0;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    margin: 0 0 0 0.5em;
 }
 
-.dashboard-builder .edit-dashboard-button:hover {
-  color: #fff;
-  background: #2f97b9;
+.dashboard-builder .edit-dashboard-button__link {
+      display: block;
+      color: #ffffff;
+      text-decoration: none
+    }
+
+.dashboard-builder .edit-dashboard-button__link:hover {
+  color: #ffffff;
   text-decoration: none;
 }
 
