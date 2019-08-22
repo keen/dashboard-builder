@@ -125,6 +125,7 @@ body {
 
     &-list-item {
       width: 20%;
+      min-width: 180px;
       height: 200px;
       padding: 10px;
       position: relative;
