@@ -798,6 +798,7 @@ body {
       padding: 9px;
       border: 1px solid #ccc;
       outline: none;
+      height: 38px;
     }
 
     &-textarea {
