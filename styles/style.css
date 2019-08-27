@@ -63,6 +63,10 @@ body {
         .dashboard-top-bar {
           width: 100%;
           z-index: 1010;
+
+          .export-icon {
+            margin: 0 1rem;
+          }
         }
       }
     }
@@ -1124,6 +1128,10 @@ body {
     .dashboard-container {
       padding-left: 90px;
     }
+  }
+
+  .export-icon {
+    cursor: pointer;
   }
 }
 
