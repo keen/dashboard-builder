@@ -56,6 +56,8 @@
     "@fortawesome/react-fontawesome": "^0.1.4",
     "babel-jest": "^24.7.1",
     "babel-plugin-prismjs": "^1.1.1",
+    "dom-to-image": "^2.6.0",
+    "file-saver": "^2.0.2",
     "highlight.js": "^9.15.8",
     "keen-dataviz": "^3.12.1",
     "keen-theme-builder": "^1.0.9",

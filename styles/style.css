@@ -63,6 +63,10 @@ body {
         .dashboard-top-bar {
           width: 100%;
           z-index: 1010;
+
+          .export-icon {
+            margin: 0 1rem;
+          }
         }
       }
     }
@@ -1125,6 +1129,10 @@ body {
     }
   }
 
+  .export-icon {
+    cursor: pointer;
+  }
+  
   .label-wrapper {
     display: flex;
     align-items: center;
