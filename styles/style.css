@@ -1083,7 +1083,7 @@ body {
   }
 
   .label-with-checkbox {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     line-height: 1;
     cursor: pointer;
@@ -1094,7 +1094,6 @@ body {
 
     .__react_component_tooltip {
       padding: 6px 10px;
-      margin-left: -124px
     }
   }
 
@@ -1132,6 +1131,17 @@ body {
 
   .export-icon {
     cursor: pointer;
+  }
+  
+  .label-wrapper {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    &__icon {
+      margin: 0 0.5rem;
+      cursor: pointer;
+    }
   }
 }
 
