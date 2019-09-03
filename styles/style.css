@@ -129,6 +129,7 @@ body {
 
     &-list-item {
       width: 20%;
+      min-width: 180px;
       height: 200px;
       padding: 10px;
       position: relative;
@@ -905,7 +906,7 @@ body {
     text-align: left;
     white-space: nowrap;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
 
     &:hover {
       color: #fff;
@@ -1067,6 +1068,7 @@ body {
   }
 
   .label-with-checkbox {
+    margin-bottom: 0.5rem;
     display: inline-flex;
     align-items: center;
     line-height: 1;
@@ -1125,6 +1127,10 @@ body {
     &__icon {
       margin: 0 0.5rem;
       cursor: pointer;
+    }
+
+    .label-with-checkbox {
+      margin-bottom: 0;
     }
   }
 }
