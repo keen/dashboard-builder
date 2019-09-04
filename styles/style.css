@@ -123,7 +123,6 @@ body {
       .share,
       .embed {
         padding: 10px;
-        font-size: 1.25rem;
         cursor: pointer;
       }
     }
@@ -214,10 +213,6 @@ body {
       color: #fff;
       cursor: pointer;
 
-      .plus-icon {
-        font-size: 20px;
-      }
-
       h3 {
         transform: translate(0, 100%) rotate(-90deg);
         transform-origin: 0 0;
@@ -264,7 +259,6 @@ body {
       p {
         cursor: pointer;
         z-index: 5;
-        font-size: 30px;
         margin: 0;
         padding: 5px;
         width: 50px;
@@ -288,7 +282,6 @@ body {
 
   .burger-icon {
     padding: 0 20px;
-    font-size: 20px;
     cursor: pointer;
     position: relative;
 
@@ -589,7 +582,6 @@ body {
     height: 30px;
     background: #000;
     color: #fff;
-    font-size: 15px;
     box-sizing: border-box;
     opacity: 0.7;
     border-radius: 3px;
@@ -747,19 +739,6 @@ body {
 
     svg {
       cursor: pointer;
-
-      &:first-child {
-        font-size: 20px;
-        margin-top: 2px;
-      }
-
-      &:nth-child(2) {
-        font-size: 25px;
-      }
-
-      &:last-child {
-        font-size: 25px;
-      }
 
       &:hover {
         color: #000;
@@ -926,6 +905,8 @@ body {
     background: #2f97b9;
     text-align: left;
     white-space: nowrap;
+    display: flex;
+    align-items: center;
 
     &:hover {
       color: #fff;
@@ -1020,14 +1001,17 @@ body {
     }
   }
 
-  .preview a {
-    font-size: 30px;
+  .preview {
     padding: 10px;
-    color: #000;
+
+    a {
+      color: #000;
+    }
   }
 
   .preview:hover a,
-  .share-icon:hover {
+  .share-icon:hover,
+  .embed-icon:hover {
     color: #414141;
   }
 
@@ -1084,6 +1068,7 @@ body {
   }
 
   .label-with-checkbox {
+    margin-bottom: 0.5rem;
     display: inline-flex;
     align-items: center;
     line-height: 1;
@@ -1142,6 +1127,10 @@ body {
     &__icon {
       margin: 0 0.5rem;
       cursor: pointer;
+    }
+
+    .label-with-checkbox {
+      margin-bottom: 0;
     }
   }
 }
