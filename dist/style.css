@@ -143,7 +143,6 @@ body {
 .dashboard-builder .dashboard-top-bar .share,
       .dashboard-builder .dashboard-top-bar .embed {
         padding: 10px;
-        font-size: 1.25rem;
         cursor: pointer;
       }
 
@@ -240,10 +239,6 @@ body {
       cursor: pointer;
     }
 
-.dashboard-builder .toolbar-bar .plus-icon {
-        font-size: 20px;
-      }
-
 .dashboard-builder .toolbar-bar h3 {
         -webkit-transform: translate(0, 100%) rotate(-90deg);
             -ms-transform: translate(0, 100%) rotate(-90deg);
@@ -300,7 +295,6 @@ body {
 .dashboard-builder .toolbar-hidden p {
         cursor: pointer;
         z-index: 5;
-        font-size: 30px;
         margin: 0;
         padding: 5px;
         width: 50px;
@@ -325,7 +319,6 @@ body {
 
 .dashboard-builder .burger-icon {
     padding: 0 20px;
-    font-size: 20px;
     cursor: pointer;
     position: relative;
 }
@@ -664,7 +657,6 @@ body {
     height: 30px;
     background: #000;
     color: #fff;
-    font-size: 15px;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     opacity: 0.7;
@@ -830,19 +822,6 @@ body {
       cursor: pointer
     }
 
-.dashboard-builder .screen-resize-icon svg:first-child {
-  font-size: 20px;
-  margin-top: 2px;
-}
-
-.dashboard-builder .screen-resize-icon svg:nth-child(2) {
-  font-size: 25px;
-}
-
-.dashboard-builder .screen-resize-icon svg:last-child {
-  font-size: 25px;
-}
-
 .dashboard-builder .screen-resize-icon svg:hover {
   color: #000;
 }
@@ -998,6 +977,10 @@ body {
     background: #2f97b9;
     text-align: left;
     white-space: nowrap;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center;
 }
 
 .dashboard-builder .new-dashboard-button:hover {
@@ -1104,14 +1087,17 @@ body {
       background: #fff;
     }
 
-.dashboard-builder .preview a {
-    font-size: 30px;
+.dashboard-builder .preview {
     padding: 10px;
-    color: #000;
 }
 
+.dashboard-builder .preview a {
+      color: #000;
+    }
+
 .dashboard-builder .preview:hover a,
-  .dashboard-builder .share-icon:hover {
+  .dashboard-builder .share-icon:hover,
+  .dashboard-builder .embed-icon:hover {
     color: #414141;
 }
 
@@ -1172,6 +1158,7 @@ body {
 }
 
 .dashboard-builder .label-with-checkbox {
+    margin-bottom: 0.5rem;
     display: -ms-inline-flexbox;
     display: inline-flex;
     -ms-flex-align: center;
@@ -1238,6 +1225,10 @@ body {
 .dashboard-builder .label-wrapper__icon {
       margin: 0 0.5rem;
       cursor: pointer;
+    }
+
+.dashboard-builder .label-wrapper .label-with-checkbox {
+      margin-bottom: 0;
     }
 
 @-webkit-keyframes spin {
