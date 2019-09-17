@@ -1095,6 +1095,12 @@ body {
     }
   }
 
+  .heatmap-container {
+    .keen-dataviz-rendering-vertical {
+      height: calc(100% - 40px);
+    }
+  } 
+
   @media only screen and (max-width: 1300px) {
     .dashboard {
       min-height: calc(100vh - 130px);
