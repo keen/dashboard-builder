@@ -59,7 +59,7 @@
     "dom-to-image": "^2.6.0",
     "file-saver": "^2.0.2",
     "highlight.js": "^9.15.8",
-    "keen-dataviz": "^3.13.2",
+    "keen-dataviz": "^3.13.3",
     "keen-theme-builder": "^1.0.9",
     "lodash": "^4.17.11",
     "prismjs": "^1.17.1",
