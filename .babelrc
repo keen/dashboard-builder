@@ -13,6 +13,6 @@
       "plugins": ["line-numbers"],
       "theme": "default",
       "css": true
-    }],
+    }]
   ]
 }
