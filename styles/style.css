@@ -1095,6 +1095,37 @@ body {
     }
   }
 
+  .heatmap-container {
+    .keen-dataviz-rendering-vertical {
+      height: calc(100% - 50px);
+    }
+  }
+
+  .keen-dataviz .rangeable-container {
+    margin: 2rem auto;
+    width: 75%;
+  }
+  .keen-dataviz .rangeable-container .rangeable-track,
+  .keen-dataviz .rangeable-container .rangeable-progress {
+    height: 4px;
+  }
+  
+  .keen-dataviz .rangeable-container .rangeable-handle {
+    width: 16px;
+    height: 16px;
+    border-width: 4px;
+  }
+  
+  .keen-dataviz .rangeable-container .rangeable-tooltip {
+    border-radius: 0;
+    font-weight: normal;
+    padding: 3px 9px;
+  }
+
+  .c3-circle {
+    fill: currentColor;
+  }
+
   @media only screen and (max-width: 1300px) {
     .dashboard {
       min-height: calc(100vh - 130px);
