@@ -504,6 +504,10 @@ body {
       z-index: 1;
       position: relative;
 
+      .c3-tooltip-container {
+        z-index: 1000;
+      }
+
       &:hover {
         .explorer-button {
           visibility: visible;
