@@ -14,14 +14,11 @@
 npm install keen-dashboard-builder --save
 ```
 
-## Live Demo
-https://keen.github.io/dashboard-builder/
-
 ## Example
 
 ```javascript
 const myDashboardBuilder = new DashboardBuilder({
-  container: "#app-container",
+  container: '#app-container',
   keenAnalysis: {
     config: {
       projectId: 'YOUR_PROJECT_ID',
@@ -32,4 +29,29 @@ const myDashboardBuilder = new DashboardBuilder({
   },
   keenWebHost: 'keen.io' // optional, the default is window.location.host
 });
+```
+
+## React component
+
+```javascript
+import React from 'react';
+import ReactDOM from 'react-dom';
+import DashboardBuilderReact from 'keen-dashboard-builder';
+
+const App = () => {
+  return (
+    <DashboardBuilderReact
+      keenAnalysis={{
+        config: {
+          projectId: 'YOUR_PROJECT_ID',
+          masterKey: 'YOUR_MASTER_KEY',
+          protocol: 'https',
+          host: 'api.keen.io'
+        }
+      }}
+    />
+  );
+};
+
+ReactDOM.render(<App />, document.getElementById('app'));
 ```

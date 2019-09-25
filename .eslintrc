@@ -1,6 +1,6 @@
 {
-  "extends": ["airbnb"],
-  "plugins": ["react", "jest"],
+  "extends": ["airbnb", "prettier", "prettier/react"],
+  "plugins": ["react", "jest", "prettier"],
   "rules": {
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "react/no-unused-prop-types": false,
