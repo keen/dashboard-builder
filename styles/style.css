@@ -1071,22 +1071,6 @@ body {
     padding: 3px 5px;
   }
 
-  .label-with-checkbox {
-    margin-bottom: 0.5rem;
-    display: inline-flex;
-    align-items: center;
-    line-height: 1;
-    cursor: pointer;
-
-    input {
-      margin: 0 0.5rem 0 0;
-    }
-
-    .__react_component_tooltip {
-      padding: 6px 10px;
-    }
-  }
-
   .keen-theme-builder {
     background-color: #fff;
 
@@ -1154,18 +1138,113 @@ body {
     cursor: pointer;
   }
   
-  .label-wrapper {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
+  .switcher {
+    margin-bottom: 0.5rem;
+    display: block;
+    position: relative;
+    overflow: hidden;
 
-    &__icon {
-      margin: 0 0.5rem;
+    &__input {
+      &:checked ~ .switcher__toggle {
+        border-color: #3ED08E;
+        background-color: #DCF9EB;
+      }
+      &:checked ~ .switcher__toggle .switcher__switch {
+        right: 2px;
+        background-color: #3ED08E;
+      }
+      &:checked ~ .switcher__value .on {
+        display: block;
+      }
+      &:checked ~ .switcher__value .off {
+        display: none;
+      }
+    }
+
+    &__toggle {
+      position: relative;
+      width: 36px;
+      height: 20px;
+      margin-right: 0.25rem;
+      margin-left: 0.5rem;
+      border: 1px solid #ccc;
+      background-color: #fff;
+      border-radius: 10px;
+      display: inline-block;
+    }
+
+    &__switch {
+      position: absolute;
+      top: 2px;
+      bottom: 0;
+      right: 18px;
+      width: 14px;
+      height: 14px;
+      margin: 0;
+      background: #ccc;
+      border-radius: 50%;
+      flex-shrink: 0;
+      transition: right 0.15s ease-in-out, background-color 0.15s ease-in-out;
+    }
+
+    &__title {
+      font-weight: 800;
+    }
+
+    &__label {
+      display: flex;
+      align-items: center;
       cursor: pointer;
     }
 
-    .label-with-checkbox {
-      margin-bottom: 0;
+    &__input {
+      position: absolute;
+      left: -999px;
+    }
+
+    &__value {
+      margin-left: 0.25rem;
+      color: #B3B5B6;
+
+      .on {
+        display: none;
+      }
+
+      .off {
+        display: block;
+      }
+    }
+  }
+
+  .accordion {
+    &__item {
+      &__heading {
+        padding: 0.5rem 1rem;
+        border-top: 1px solid #f3f3f3;
+        border-bottom: 2px solid rgba(204, 204, 204, 0.2);
+        background-color: #fff;
+        cursor: pointer;
+
+        .heading__icon {
+          margin-right: 1rem;
+          transition: transform 0.15s ease-in-out;
+        }
+      }
+
+      &__content {
+        padding: 1rem;
+        animation: fadein 0.35s ease-in;
+      }
+
+      &.open {
+        .accordion__item__heading {
+          background-color: #D9EFFA;
+
+          .heading__icon {
+            transform: rotate(90deg);
+          }
+        }
+      }
     }
   }
 }
@@ -1178,4 +1257,14 @@ body {
   100% {
     transform: rotate(360deg);
   }
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }

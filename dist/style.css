@@ -574,6 +574,10 @@ body {
       position: relative;
 }
 
+.dashboard-builder .chart-container-viewer .c3-tooltip-container {
+        z-index: 1000;
+      }
+
 .dashboard-builder .chart-container-viewer:hover .explorer-button {
           visibility: visible;
 }
@@ -1186,6 +1190,36 @@ body {
 .dashboard-builder .keen-theme-builder .builder__header {
       font-size: 1rem;
     }
+
+.dashboard-builder .heatmap-container .keen-dataviz-rendering-vertical {
+      height: calc(100% - 50px);
+    }
+
+.dashboard-builder .keen-dataviz .rangeable-container {
+    margin: 2rem auto;
+    width: 75%;
+}
+
+.dashboard-builder .keen-dataviz .rangeable-container .rangeable-track,
+  .dashboard-builder .keen-dataviz .rangeable-container .rangeable-progress {
+    height: 4px;
+}
+
+.dashboard-builder .keen-dataviz .rangeable-container .rangeable-handle {
+    width: 16px;
+    height: 16px;
+    border-width: 4px;
+}
+
+.dashboard-builder .keen-dataviz .rangeable-container .rangeable-tooltip {
+    border-radius: 0;
+    font-weight: normal;
+    padding: 3px 9px;
+}
+
+.dashboard-builder .c3-circle {
+    fill: currentColor;
+}
 
 @media only screen and (max-width: 1300px) {
 
