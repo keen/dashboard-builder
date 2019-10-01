@@ -33,25 +33,4 @@ const myDashboardBuilder = new DashboardBuilder({
 
 ## React component
 
-```javascript
-import React from 'react';
-import ReactDOM from 'react-dom';
-import DashboardBuilderReact from 'keen-dashboard-builder';
-
-const App = () => {
-  return (
-    <DashboardBuilderReact
-      keenAnalysis={{
-        config: {
-          projectId: 'YOUR_PROJECT_ID',
-          masterKey: 'YOUR_MASTER_KEY',
-          protocol: 'https',
-          host: 'api.keen.io'
-        }
-      }}
-    />
-  );
-};
-
-ReactDOM.render(<App />, document.getElementById('app'));
-```
+https://github.com/keen/react-dashboards
