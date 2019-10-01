@@ -482,6 +482,8 @@ body {
       z-index: 3;
 
       input {
+        padding-left: 5px;
+        padding-right: 5px;
         border: 0;
         background: inherit;
         outline: none;
