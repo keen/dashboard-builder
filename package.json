@@ -60,7 +60,7 @@
     "file-saver": "^2.0.2",
     "highlight.js": "^9.15.8",
     "keen-dataviz": "^3.13.3",
-    "keen-theme-builder": "^1.0.9",
+    "keen-theme-builder": "^1.0.10",
     "lodash": "^4.17.11",
     "prettier": "^1.18.2",
     "prismjs": "^1.17.1",
