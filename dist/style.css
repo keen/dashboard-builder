@@ -1161,24 +1161,6 @@ body {
     padding: 3px 5px;
 }
 
-.dashboard-builder .label-with-checkbox {
-    margin-bottom: 0.5rem;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    -ms-flex-align: center;
-        align-items: center;
-    line-height: 1;
-    cursor: pointer;
-}
-
-.dashboard-builder .label-with-checkbox input {
-      margin: 0 0.5rem 0 0;
-    }
-
-.dashboard-builder .label-with-checkbox .__react_component_tooltip {
-      padding: 6px 10px;
-    }
-
 .dashboard-builder .keen-theme-builder {
     background-color: #fff;
 }
@@ -1247,23 +1229,122 @@ body {
     cursor: pointer;
 }
 
-.dashboard-builder .label-wrapper {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-align: center;
-        align-items: center;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+.dashboard-builder .switcher {
+    margin-bottom: 0.5rem;
+    display: block;
+    position: relative;
+    overflow: hidden;
 }
 
-.dashboard-builder .label-wrapper__icon {
-      margin: 0 0.5rem;
+.dashboard-builder .switcher__input:checked ~ .switcher__toggle {
+  border-color: #3ED08E;
+  background-color: #DCF9EB;
+}
+
+.dashboard-builder .switcher__input:checked ~ .switcher__toggle .switcher__switch {
+  right: 2px;
+  background-color: #3ED08E;
+}
+
+.dashboard-builder .switcher__input:checked ~ .switcher__value .on {
+  display: block;
+}
+
+.dashboard-builder .switcher__input:checked ~ .switcher__value .off {
+  display: none;
+}
+
+.dashboard-builder .switcher__toggle {
+      position: relative;
+      width: 36px;
+      height: 20px;
+      margin-right: 0.25rem;
+      margin-left: 0.5rem;
+      border: 1px solid #ccc;
+      background-color: #fff;
+      border-radius: 10px;
+      display: inline-block;
+    }
+
+.dashboard-builder .switcher__switch {
+      position: absolute;
+      top: 2px;
+      bottom: 0;
+      right: 18px;
+      width: 14px;
+      height: 14px;
+      margin: 0;
+      background: #ccc;
+      border-radius: 50%;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+      -webkit-transition: right 0.15s ease-in-out, background-color 0.15s ease-in-out;
+      -o-transition: right 0.15s ease-in-out, background-color 0.15s ease-in-out;
+      transition: right 0.15s ease-in-out, background-color 0.15s ease-in-out;
+    }
+
+.dashboard-builder .switcher__title {
+      font-weight: 800;
+    }
+
+.dashboard-builder .switcher__label {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-align: center;
+          align-items: center;
       cursor: pointer;
     }
 
-.dashboard-builder .label-wrapper .label-with-checkbox {
-      margin-bottom: 0;
+.dashboard-builder .switcher__input {
+      position: absolute;
+      left: -999px;
     }
+
+.dashboard-builder .switcher__value {
+      margin-left: 0.25rem;
+      color: #B3B5B6;
+    }
+
+.dashboard-builder .switcher__value .on {
+        display: none;
+      }
+
+.dashboard-builder .switcher__value .off {
+        display: block;
+      }
+
+.dashboard-builder .accordion__item__heading {
+        padding: 0.5rem 1rem;
+        border-top: 1px solid #f3f3f3;
+        border-bottom: 2px solid rgba(204, 204, 204, 0.2);
+        background-color: #fff;
+        cursor: pointer;
+      }
+
+.dashboard-builder .accordion__item__heading .heading__icon {
+          margin-right: 1rem;
+          -webkit-transition: -webkit-transform 0.15s ease-in-out;
+          transition: -webkit-transform 0.15s ease-in-out;
+          -o-transition: transform 0.15s ease-in-out;
+          transition: transform 0.15s ease-in-out;
+          transition: transform 0.15s ease-in-out, -webkit-transform 0.15s ease-in-out;
+        }
+
+.dashboard-builder .accordion__item__content {
+        padding: 1rem;
+        -webkit-animation: fadein 0.35s ease-in;
+                animation: fadein 0.35s ease-in;
+      }
+
+.dashboard-builder .accordion__item.open .accordion__item__heading {
+          background-color: #D9EFFA;
+}
+
+.dashboard-builder .accordion__item.open .accordion__item__heading .heading__icon {
+            -webkit-transform: rotate(90deg);
+                -ms-transform: rotate(90deg);
+                    transform: rotate(90deg);
+          }
 
 @-webkit-keyframes spin {
   0% {
@@ -1287,4 +1368,24 @@ body {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
   }
+}
+
+@-webkit-keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
