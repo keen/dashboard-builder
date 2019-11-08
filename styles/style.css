@@ -770,7 +770,7 @@ body {
   }
 
   .settings {
-    width: 300px;
+    width: 350px;
 
     h4 {
       margin-top: 2rem;
@@ -865,7 +865,7 @@ body {
   }
 
   .settings-container {
-    min-width: 300px;
+    min-width: 350px;
     min-height: 100%;
     background: #fff;
     border-left: 1px solid #eee;
