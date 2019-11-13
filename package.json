@@ -83,12 +83,14 @@
     "react-redux": "^7.1.0",
     "react-router-dom": "^5.0.0",
     "react-select": "^2.4.3",
+    "react-sizeme": "^2.6.10",
     "react-tabs": "^3.0.0",
     "react-time-ago": "^5.0.4",
     "react-tooltip": "^3.10.0",
     "redux": "^4.0.1",
     "redux-thunk": "^2.3.0",
-    "styled-jsx": "^3.2.1"
+    "styled-jsx": "^3.2.1",
+    "webfontloader": "^1.6.28"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
