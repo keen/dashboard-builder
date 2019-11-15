@@ -468,17 +468,18 @@ body {
 
     & > .keen-dataviz {
       overflow: hidden;
-      width: 98%;
-      margin-top: 10px;
+      width: 100%;
+      margin-top: 0;
+      border-top: 1px solid #eee;
     }
 
     .chart-title {
-      height: 40px;
+      height: 30px;
       width: 100%;
-      border-bottom: 1px solid #eee;
+      border-bottom: 0;
       display: flex;
-      align-items: center;
-      justify-content: center;
+      align-items: left;
+      justify-content: left;
       z-index: 3;
 
       input {
@@ -486,8 +487,29 @@ body {
         background: inherit;
         outline: none;
         width: 100%;
-        text-align: center;
-        font-size: 18px;
+        text-align: left;
+        font-size: 14px;
+        color: #222222;
+      }
+    }
+
+    .chart-subtitle {
+      height: 25px;
+      width: 100%;
+      border-bottom: 0;
+      display: flex;
+      align-items: left;
+      justify-content: left;
+      z-index: 3;
+
+      input {
+        border: 0;
+        background: inherit;
+        outline: none;
+        width: 100%;
+        text-align: left;
+        font-size: 14px;
+        color: #6f6f6f;
       }
     }
 
@@ -770,7 +792,8 @@ body {
   }
 
   .settings {
-    width: 300px;
+    width: 350px;
+    background: #F3F7F9;
 
     h4 {
       margin-top: 2rem;
@@ -807,7 +830,19 @@ body {
     }
 
     &-chart {
-      padding: 1rem;
+      padding: 0rem;
+
+      &-saved-query {
+        padding: 1rem;
+      }
+
+      .keen-theme-builder {
+        padding: 0;
+
+        .builder__header {
+          display: none;
+        }
+      }
 
       h4 {
         &:first-child {
@@ -865,11 +900,12 @@ body {
   }
 
   .settings-container {
-    min-width: 300px;
+    min-width: 350px;
     min-height: 100%;
     background: #fff;
     border-left: 1px solid #eee;
     position: relative;
+    background: #F3F7F9;
 
     .color-palette__item {
       .color-picker__popover {
