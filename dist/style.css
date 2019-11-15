@@ -526,20 +526,21 @@ body {
 
 .dashboard-builder .chart-container > .keen-dataviz {
   overflow: hidden;
-  width: 98%;
-  margin-top: 10px;
+  width: 100%;
+  margin-top: 0;
+  border-top: 1px solid #eee;
 }
 
 .dashboard-builder .chart-container .chart-title {
-      height: 40px;
+      height: 30px;
       width: 100%;
-      border-bottom: 1px solid #eee;
+      border-bottom: 0;
       display: -ms-flexbox;
       display: flex;
-      -ms-flex-align: center;
-          align-items: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+      -ms-flex-align: left;
+          align-items: left;
+      -ms-flex-pack: left;
+          justify-content: left;
       z-index: 3;
 }
 
@@ -548,8 +549,32 @@ body {
         background: inherit;
         outline: none;
         width: 100%;
-        text-align: center;
-        font-size: 18px;
+        text-align: left;
+        font-size: 14px;
+        color: #222222;
+      }
+
+.dashboard-builder .chart-container .chart-subtitle {
+      height: 25px;
+      width: 100%;
+      border-bottom: 0;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-align: left;
+          align-items: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+      z-index: 3;
+}
+
+.dashboard-builder .chart-container .chart-subtitle input {
+        border: 0;
+        background: inherit;
+        outline: none;
+        width: 100%;
+        text-align: left;
+        font-size: 14px;
+        color: #6f6f6f;
       }
 
 .dashboard-builder .chart-container-viewer {
@@ -852,7 +877,8 @@ body {
     }
 
 .dashboard-builder .settings {
-    width: 300px;
+    width: 350px;
+    background: #F3F7F9;
 }
 
 .dashboard-builder .settings h4 {
@@ -888,8 +914,20 @@ body {
 }
 
 .dashboard-builder .settings-chart {
-      padding: 1rem;
+      padding: 0rem;
     }
+
+.dashboard-builder .settings-chart-saved-query {
+        padding: 1rem;
+      }
+
+.dashboard-builder .settings-chart .keen-theme-builder {
+        padding: 0;
+      }
+
+.dashboard-builder .settings-chart .keen-theme-builder .builder__header {
+          display: none;
+        }
 
 .dashboard-builder .settings-chart h4:first-child {
   margin-top: 0;
@@ -946,11 +984,12 @@ body {
         }
 
 .dashboard-builder .settings-container {
-    min-width: 300px;
+    min-width: 350px;
     min-height: 100%;
     background: #fff;
     border-left: 1px solid #eee;
     position: relative;
+    background: #F3F7F9;
 }
 
 .dashboard-builder .settings-container .color-palette__item .color-picker__popover {
