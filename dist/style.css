@@ -613,20 +613,21 @@ body {
 
 .dashboard-builder .chart-container-viewer > .keen-dataviz {
   overflow: hidden;
-  width: 98%;
-  margin-top: 10px;
+  width: 100%;
+  margin-top: 0;
+  border-top: 1px solid #eee;
 }
 
 .dashboard-builder .chart-container-viewer .chart-title {
-        height: 40px;
+        height: 30px;
         width: 100%;
-        border-bottom: 1px solid #eee;
+        border-bottom: 0;
         display: -ms-flexbox;
         display: flex;
-        -ms-flex-align: center;
-            align-items: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+        -ms-flex-align: left;
+            align-items: left;
+        -ms-flex-pack: left;
+            justify-content: left;
         z-index: 3;
 }
 
@@ -635,8 +636,32 @@ body {
           background: inherit;
           outline: none;
           width: 100%;
-          text-align: center;
-          font-size: 18px;
+          text-align: left;
+          font-size: 14px;
+          color: #222222;
+        }
+
+.dashboard-builder .chart-container-viewer .chart-subtitle {
+        height: 25px;
+        width: 100%;
+        border-bottom: 0;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: left;
+            align-items: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+        z-index: 3;
+}
+
+.dashboard-builder .chart-container-viewer .chart-subtitle input {
+          border: 0;
+          background: inherit;
+          outline: none;
+          width: 100%;
+          text-align: left;
+          font-size: 14px;
+          color: #6f6f6f;
         }
 
 .dashboard-builder .config-buttons {
@@ -1190,6 +1215,14 @@ body {
 .dashboard-builder .settings-theme-builder {
     padding: 0;
 }
+
+.dashboard-builder .settings-theme-builder .keen-theme-builder {
+      padding: 0;
+    }
+
+.dashboard-builder .settings-theme-builder .keen-theme-builder .builder__header {
+        display: none;
+      }
 
 .dashboard-builder .switch-dashboard {
     width: 400px;
