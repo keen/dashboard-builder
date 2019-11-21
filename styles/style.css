@@ -445,7 +445,6 @@ body {
     justify-content: center;
     align-items: center;
     position: absolute;
-    border: 1px solid #eee;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
@@ -470,7 +469,7 @@ body {
       overflow: hidden;
       width: 100%;
       margin-top: 0;
-      border-top: 1px solid #eee;
+      border: 1px solid #eee;
     }
 
     .chart-title {
@@ -928,6 +927,7 @@ body {
     border-left: 1px solid #eee;
     position: relative;
     background: #F3F7F9;
+    overflow: auto;
 
     .color-palette__item {
       .color-picker__popover {
