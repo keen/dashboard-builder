@@ -496,7 +496,6 @@ body {
     -ms-flex-align: center;
         align-items: center;
     position: absolute;
-    border: 1px solid #eee;
     border-radius: 5px;
     display: flex;
     -ms-flex-direction: column;
@@ -528,7 +527,7 @@ body {
   overflow: hidden;
   width: 100%;
   margin-top: 0;
-  border-top: 1px solid #eee;
+  border: 1px solid #eee;
 }
 
 .dashboard-builder .chart-container .chart-title {
@@ -1015,6 +1014,7 @@ body {
     border-left: 1px solid #eee;
     position: relative;
     background: #F3F7F9;
+    overflow: auto;
 }
 
 .dashboard-builder .settings-container .color-palette__item .color-picker__popover {
