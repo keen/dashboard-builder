@@ -614,7 +614,7 @@ body {
   overflow: hidden;
   width: 100%;
   margin-top: 0;
-  border-top: 1px solid #eee;
+  border: 1px solid #eee;
 }
 
 .dashboard-builder .chart-container-viewer .chart-title {
