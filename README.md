@@ -10,7 +10,7 @@
 
 ## Last build status
 
-[![CircleCI](https://circleci.com/gh/keen/dashboard-builder.svg?style=svg)](https://circleci.com/gh/keen/dashboard-builder)
+[![CircleCI](https://circleci.com/gh/keen/dashboard-builder/tree/master.svg?style=svg)](https://circleci.com/gh/keen/dashboard-builder/tree/master)
 
 ## Install
 
