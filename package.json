@@ -12,6 +12,8 @@
     "build:css": "node_modules/postcss-cli/bin/postcss styles/style.css -o dist/style.css --config postcss.config.js",
     "build:css:min": "OPTIMIZE_MINIMIZE=1 node_modules/postcss-cli/bin/postcss styles/style.css -o dist/style.min.css --config postcss.config.js",
     "build:gh-pages": "NODE_ENV=development webpack --mode development",
+    "lint": "eslint lib/**/*.js",
+    "prettier": "prettier --write 'lib/**/*.{js,jsx,json}'",
     "version": "npm run build && git add .",
     "postversion": "git push && git push --tags && npm publish",
     "builder": "concurrently --kill-others \"NODE_ENV=development component=builder webpack-dev-server\"",
@@ -28,6 +30,18 @@
     ],
     "setupFiles": [
       "<rootDir>/jestSetup.js"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "npm run prettier",
+      "eslint --fix",
+      "git add *"
     ]
   },
   "repository": {
@@ -68,6 +82,8 @@
     "dom-to-image": "^2.6.0",
     "file-saver": "^2.0.2",
     "highlight.js": "^9.15.8",
+    "javascript-time-ago": "^2.0.4",
+    "keen-analysis": "^3.4.0",
     "keen-dataviz": "^3.13.7",
     "keen-theme-builder": "^1.0.23",
     "lodash": "^4.17.11",
@@ -99,6 +115,7 @@
     "@babel/preset-react": "^7.0.0",
     "@babel/runtime": "^7.4.5",
     "autoprefixer": "^8.2.0",
+    "babel-eslint": "^10.0.3",
     "babel-loader": "^8.0.5",
     "babel-plugin-syntax-class-properties": "^6.13.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
@@ -112,17 +129,22 @@
     "enzyme-to-json": "^3.4.3",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-prettier": "^6.7.0",
     "eslint-loader": "^2.0.0",
     "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-jest": "^23.1.1",
     "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-react": "^7.7.0",
     "gh-pages": "^2.0.1",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
+    "husky": "^3.1.0",
     "jest": "^23.6.0",
     "jest-environment-jsdom-c3": "^2.0.0",
     "keen-analysis": "^3.4.0",
     "madge": "^3.6.0",
+    "lint-staged": "^9.5.0",
     "nock": "^9.2.6",
     "postcss": "^6.0.21",
     "postcss-cli": "^5.0.0",
