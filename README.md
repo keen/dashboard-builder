@@ -8,10 +8,20 @@
 <a href="https://www.jsdelivr.com/package/npm/keen-dashboard-builder"><img src="https://data.jsdelivr.com/v1/package/npm/keen-dashboard-builder/badge" alt=""></a>
 <a href="https://www.npmjs.com/package/keen-dashboard-builder"><img src="https://img.shields.io/npm/dm/keen-dashboard-builder.svg" alt=""></a>
 
+## Last build status
+
+[![CircleCI](https://circleci.com/gh/keen/dashboard-builder/tree/master.svg?style=svg)](https://circleci.com/gh/keen/dashboard-builder/tree/master)
+
 ## Install
+
+For npm package manager
 
 ```ssh
 npm install keen-dashboard-builder --save
+```
+For yarn
+```ssh
+yarn add keen-dashboard-builder
 ```
 
 ## Example
