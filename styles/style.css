@@ -857,6 +857,16 @@ body {
         padding: 1rem;
       }
 
+      #dashboard-builder-explorer {
+        .keen-explorer {
+          .panel-main {
+            min-width: 0;
+            max-width: 330px;
+            box-shadow: none;
+          }
+        }
+      }
+
       .keen-theme-builder {
         padding: 0;
 
