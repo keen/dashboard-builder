@@ -11,3 +11,6 @@ jobs:
       - run:
           name: Circular dependencies
           command: npm run circular
+      - run:
+          name: Build
+          command: npm run build
