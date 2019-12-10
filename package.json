@@ -109,7 +109,8 @@
     "react-tooltip": "^3.10.0",
     "redux": "^4.0.1",
     "redux-thunk": "^2.3.0",
-    "styled-jsx": "^3.2.1"
+    "styled-jsx": "^3.2.1",
+    "uuidv4": "^6.0.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
