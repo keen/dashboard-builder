@@ -535,7 +535,6 @@ body {
       display: flex;
       justify-content: center;
       align-items: center;
-      border: 1px solid #eee;
       border-radius: 5px;
       display: flex;
       flex-direction: column;
