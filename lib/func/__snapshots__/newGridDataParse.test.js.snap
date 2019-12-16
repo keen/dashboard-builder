@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`newGridDataParse() should parse data correctly 1`] = `
+Object {
+  "data": Object {
+    "items": Array [
+      Object {
+        "height": 40,
+        "left": 20,
+        "text": "<p>Component</p>",
+        "top": 20,
+        "type": "paragraph",
+        "width": 1160,
+      },
+      Object {
+        "chartTitle": "Title",
+        "height": 2800,
+        "left": 620,
+        "savedQuery": Array [
+          Object {
+            "label": "Saved query",
+            "value": "saved_query",
+          },
+        ],
+        "top": 80,
+        "type": "bar",
+        "width": 560,
+      },
+    ],
+  },
+  "settings": Object {
+    "items": Array [
+      Object {
+        "h": 0,
+        "i": "19c7a585-82ac-4e83-bbd4-b8757b445c4e",
+        "text": "<p>Component</p>",
+        "type": "paragraph",
+        "w": 11,
+        "x": 0,
+        "y": 0,
+      },
+      Object {
+        "chartTitle": "Title",
+        "h": 84,
+        "i": "19c7a585-82ac-4e83-bbd4-b8757b445c4e",
+        "savedQuery": Array [
+          Object {
+            "label": "Saved query",
+            "value": "saved_query",
+          },
+        ],
+        "type": "bar",
+        "w": 5,
+        "x": 6,
+        "y": 0,
+      },
+    ],
+    "layout": Array [
+      Object {
+        "h": 0,
+        "i": "19c7a585-82ac-4e83-bbd4-b8757b445c4e",
+        "moved": false,
+        "static": false,
+        "w": 11,
+        "x": 0,
+        "y": 0,
+      },
+      Object {
+        "h": 84,
+        "i": "19c7a585-82ac-4e83-bbd4-b8757b445c4e",
+        "moved": false,
+        "static": false,
+        "w": 5,
+        "x": 6,
+        "y": 0,
+      },
+    ],
+  },
+}
+`;

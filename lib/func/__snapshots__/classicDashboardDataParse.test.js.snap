@@ -1,0 +1,103 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`classicDashboardDataParse() should parse data correctly 1`] = `
+Object {
+  "rows": Array [
+    Object {
+      "height": 280,
+      "tiles": Array [
+        Object {
+          "column_width": 6,
+          "query_name": "users",
+        },
+        Object {
+          "column_width": 6,
+          "query_name": "sales",
+        },
+      ],
+      "title": "Users and sales",
+    },
+  ],
+  "settings": Object {
+    "dryRun": false,
+    "items": Array [
+      Object {
+        "h": 1,
+        "i": "19c7a585-82ac-4e83-bbd4-b8757b445c4e",
+        "text": "<h1>Users and sales</h1>",
+        "type": "paragraph",
+        "w": 12,
+        "x": 0,
+        "y": 0,
+      },
+      Object {
+        "h": 8,
+        "i": "19c7a585-82ac-4e83-bbd4-b8757b445c4e",
+        "savedQuery": Array [
+          Object {
+            "label": "Users",
+            "value": "users",
+          },
+        ],
+        "sparkline": false,
+        "w": 6,
+        "x": 0,
+        "y": 2,
+      },
+      Object {
+        "h": 8,
+        "i": "19c7a585-82ac-4e83-bbd4-b8757b445c4e",
+        "savedQuery": Array [
+          Object {
+            "label": "Sales",
+            "value": "sales",
+          },
+        ],
+        "sparkline": false,
+        "w": 6,
+        "x": 6,
+        "y": 2,
+      },
+    ],
+    "layout": Array [
+      Object {
+        "h": 1,
+        "i": "19c7a585-82ac-4e83-bbd4-b8757b445c4e",
+        "text": "<h1>Users and sales</h1>",
+        "type": "paragraph",
+        "w": 12,
+        "x": 0,
+        "y": 0,
+      },
+      Object {
+        "h": 8,
+        "i": "19c7a585-82ac-4e83-bbd4-b8757b445c4e",
+        "savedQuery": Array [
+          Object {
+            "label": "Users",
+            "value": "users",
+          },
+        ],
+        "sparkline": false,
+        "w": 6,
+        "x": 0,
+        "y": 2,
+      },
+      Object {
+        "h": 8,
+        "i": "19c7a585-82ac-4e83-bbd4-b8757b445c4e",
+        "savedQuery": Array [
+          Object {
+            "label": "Sales",
+            "value": "sales",
+          },
+        ],
+        "sparkline": false,
+        "w": 6,
+        "x": 6,
+        "y": 2,
+      },
+    ],
+  },
+}
+`;

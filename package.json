@@ -63,7 +63,6 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.17",
     "@fortawesome/free-solid-svg-icons": "^5.8.1",
     "@fortawesome/react-fontawesome": "^0.1.4",
-    "babel-jest": "^24.7.1",
     "babel-plugin-prismjs": "^1.1.1",
     "dom-to-image": "^2.6.0",
     "file-saver": "^2.0.2",
@@ -89,6 +88,7 @@
     "redux": "^4.0.1",
     "redux-thunk": "^2.3.0",
     "styled-jsx": "^3.2.1",
+    "uuidv4": "^6.0.0",
     "webfontloader": "^1.6.28"
   },
   "devDependencies": {
@@ -121,7 +121,7 @@
     "gh-pages": "^2.0.1",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
-    "jest": "^23.6.0",
+    "jest": "^24.9.0",
     "jest-environment-jsdom-c3": "^2.0.0",
     "keen-analysis": "^3.4.0",
     "madge": "^3.6.0",
