@@ -2,7 +2,7 @@
   "name": "keen-dashboard-builder",
   "description": "Dashboard builder for Keen.io",
   "license": "MIT",
-  "version": "1.5.4",
+  "version": "1.5.5",
   "main": "dist/main.min.js",
   "scripts": {
     "start": "concurrently --kill-others \"NODE_ENV=development webpack-dev-server\"",
