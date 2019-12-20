@@ -584,7 +584,6 @@ body {
           justify-content: center;
       -ms-flex-align: center;
           align-items: center;
-      border: 1px solid #eee;
       border-radius: 5px;
       display: flex;
       -ms-flex-direction: column;

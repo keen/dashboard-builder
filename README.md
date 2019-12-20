@@ -8,9 +8,9 @@
 <a href="https://www.jsdelivr.com/package/npm/keen-dashboard-builder"><img src="https://data.jsdelivr.com/v1/package/npm/keen-dashboard-builder/badge" alt=""></a>
 <a href="https://www.npmjs.com/package/keen-dashboard-builder"><img src="https://img.shields.io/npm/dm/keen-dashboard-builder.svg" alt=""></a>
 
-## Last build status
+## Build status
 
-[![CircleCI](https://circleci.com/gh/keen/dashboard-builder/tree/master.svg?style=svg)](https://circleci.com/gh/keen/dashboard-builder/tree/master)
+[![CircleCI](https://circleci.com/gh/keen/dashboard-builder/tree/develop.svg?style=svg)](https://circleci.com/gh/keen/dashboard-builder/tree/develop)
 
 ## Install
 
@@ -44,3 +44,19 @@ const myDashboardBuilder = new DashboardBuilder({
 ## React component
 
 https://github.com/keen/react-dashboards
+
+## npm scripts
+
+List of useful commands that could be used by developers.
+
+| Command               | Description                                                                       |
+| --------------------- | --------------------------------------------------------------------------------- |
+| `lint`                | run linter against current application codebase.                                  |
+| `test`                | run unit tests against current application codebase.                              |
+| `circular`            | run scripts responsible for the detection of circular dependencies between files. |
+| `commit`              | run commit command line interface.                                                |
+| `prettier`            | run code formatter process against current codebase.                              |
+
+## commit
+
+This project uses [Conventional Commits](https://www.conventionalcommits.org) to enforce common commit standards.
