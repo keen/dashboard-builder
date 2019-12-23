@@ -490,46 +490,6 @@ body {
       border: 1px solid #eee;
     }
 
-    .chart-title {
-      height: 30px;
-      width: 100%;
-      border-bottom: 0;
-      display: flex;
-      align-items: left;
-      justify-content: left;
-      z-index: 3;
-
-      input {
-        border: 0;
-        background: inherit;
-        outline: none;
-        width: 100%;
-        text-align: left;
-        font-size: 14px;
-        color: #222222;
-      }
-    }
-
-    .chart-subtitle {
-      height: 25px;
-      width: 100%;
-      border-bottom: 0;
-      display: flex;
-      align-items: left;
-      justify-content: left;
-      z-index: 3;
-
-      input {
-        border: 0;
-        background: inherit;
-        outline: none;
-        width: 100%;
-        text-align: left;
-        font-size: 14px;
-        color: #6f6f6f;
-      }
-    }
-
     &-viewer {
       background: #fff;
       display: flex;
@@ -561,46 +521,6 @@ body {
         width: 100%;
         margin-top: 0;
         border: 1px solid #eee;
-      }
-
-      .chart-title {
-        height: 30px;
-        width: 100%;
-        border-bottom: 0;
-        display: flex;
-        align-items: left;
-        justify-content: left;
-        z-index: 3;
-  
-        input {
-          border: 0;
-          background: inherit;
-          outline: none;
-          width: 100%;
-          text-align: left;
-          font-size: 14px;
-          color: #222222;
-        }
-      }
-  
-      .chart-subtitle {
-        height: 25px;
-        width: 100%;
-        border-bottom: 0;
-        display: flex;
-        align-items: left;
-        justify-content: left;
-        z-index: 3;
-  
-        input {
-          border: 0;
-          background: inherit;
-          outline: none;
-          width: 100%;
-          text-align: left;
-          font-size: 14px;
-          color: #6f6f6f;
-        }
       }
     }
   }
@@ -741,6 +661,18 @@ body {
     th {
       z-index: 0;
     }
+  }
+
+  .keen-dataviz-title {
+    padding-top: 5px;
+  }
+
+  .keen-dataviz-title,
+  .keen-dataviz-metric-title,
+  .keen-dataviz-subtitle,
+  .keen-dataviz-metric-subtitle {
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   .chart-draggable {
