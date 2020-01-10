@@ -67,6 +67,8 @@ body {
 
           .export-icon {
             margin: 0 1rem;
+            order: 2;
+            flex-shrink: 0;
           }
         }
       }
@@ -117,13 +119,19 @@ body {
       left: 0;
       z-index: 999;
 
+      &__menu {
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+      }
+
       .share {
         position: relative;
       }
 
       .share,
       .embed {
-        padding: 10px;
+        margin: 0 1rem;
         cursor: pointer;
       }
     }
@@ -381,6 +389,7 @@ body {
       background: #2f97b9;
       border: none;
       font-size: 14px;
+      line-height: 1;
 
       .svg-inline--fa {
         margin-right: 0.25rem;
@@ -440,6 +449,16 @@ body {
     }
   }
 
+  .keen-dataviz {
+    padding: 15px;
+    border: 1px solid #ccc;
+
+    .keen-dataviz {
+      padding: 0;
+      border: none;
+    }
+  }
+
   .chart-container {
     background: #fff;
     display: flex;
@@ -456,7 +475,6 @@ body {
       box-shadow: -6px 6px 8px 0 rgba(0, 0, 0, 0.23);
       z-index: 101;
 
-      .resizers,
       .config-buttons {
         visibility: visible;
       }
@@ -562,19 +580,6 @@ body {
 
     &:hover {
       background: #424242;
-    }
-  }
-
-  .resizers {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    border: 1px dashed #7c7c7c;
-    border-radius: 5px;
-    visibility: hidden;
-
-    div {
-      position: absolute;
     }
   }
 
@@ -708,15 +713,14 @@ body {
   }
 
   .screen-resize-icon {
-    position: absolute;
-    left: 48%;
-    width: 100px;
     display: flex;
-    justify-content: space-between;
     color: #6f6f6fa8;
     align-items: center;
+    flex: 1;
+    justify-content: center;
 
     svg {
+      margin: 0 1rem;
       cursor: pointer;
 
       &:hover {
@@ -738,6 +742,7 @@ body {
     color: #fff;
     background: #2f97b9;
     text-transform: uppercase;
+    line-height: 1;
 
     svg {
       margin-right: 0.25rem;
@@ -752,6 +757,10 @@ body {
       margin-top: 2rem;
       margin-bottom: 0.5rem;
       font-weight: normal;
+    }
+
+    &-wrapper {
+      padding: 1rem;
     }
 
     &-input {
@@ -783,7 +792,7 @@ body {
     }
 
     &-chart {
-      padding: 0rem;
+      padding: 0;
 
       &-saved-query {
         padding: 1rem;
@@ -804,6 +813,17 @@ body {
 
         .builder__header {
           display: none;
+        }
+
+        .keen-theme-builder__row {
+          padding-left: 1rem;
+          padding-right: 1rem;
+        }
+
+        .accordion__item__content {
+          .keen-theme-builder__row {
+            padding: 0;
+          }
         }
       }
 
@@ -935,6 +955,8 @@ body {
 
   .new-chart-info {
     position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     display: flex;
@@ -1072,7 +1094,7 @@ body {
     }
 
     .builder__header {
-      font-size: 1rem;
+      display: none;
     }
   }
 
@@ -1209,37 +1231,65 @@ body {
     }
   }
 
-  .accordion {
-    &__item {
-      &__heading {
-        padding: 0.5rem 1rem;
-        border-top: 1px solid #f3f3f3;
-        border-bottom: 2px solid rgba(204, 204, 204, 0.2);
-        background-color: #fff;
-        cursor: pointer;
-
-        .heading__icon {
-          margin-right: 1rem;
-          transition: transform 0.15s ease-in-out;
-        }
-      }
-
-      &__content {
-        padding: 1rem;
-        animation: fadein 0.35s ease-in;
-      }
-
-      &.open {
-        .accordion__item__heading {
-          background-color: #D9EFFA;
-
-          .heading__icon {
-            transform: rotate(90deg);
-          }
-        }
+  .layout {
+    &.editor {
+      .keen-dataviz {
+        pointer-events: none;
       }
     }
   }
+
+  .react-grid-item {
+
+    &:hover {
+      z-index: 100;
+      
+      .config-buttons {
+        visibility: visible;
+      }
+    }
+
+      & > .react-resizable-handle {
+        width: 16px;
+        height: 16px;
+        background-color: transparent;
+        background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJ4TWlkWU1pZCBtZWV0IiB2aWV3Qm94PSI5Mi43MjYzMzE4ODA1ODUzOCA4My45MzgyNjA0OTcxMDkwMSA0NzQuMTIxNzExMjU2OTYxIDQ3NC4xMjM0NzkwMDU3ODIiIHdpZHRoPSI0NzAuMTIiIGhlaWdodD0iNDcwLjEyIj48ZGVmcz48cGF0aCBkPSJNMTg1LjY1IDI0Ny41N0w0MDEuMjEgNDYzLjE0QzM3Ni43OSA0ODcuNTYgMzYzLjIyIDUwMS4xMyAzNjAuNSA1MDMuODVDMzQxLjYgNTIyLjc1IDM1NC45OSA1NTUuMDYgMzgxLjcyIDU1NS4wNkMzOTYuOTMgNTU1LjA2IDUxOC42MyA1NTUuMDYgNTMzLjg1IDU1NS4wNkM1NTAuNDIgNTU1LjA2IDU2My44NSA1NDEuNjMgNTYzLjg1IDUyNS4wNkM1NjMuODUgNTA5Ljg1IDU2My44NSAzODguMTQgNTYzLjg1IDM3Mi45M0M1NjMuODUgMzQ2LjIgNTMxLjUzIDMzMi44MiA1MTIuNjMgMzUxLjcyQzUwOS45MiAzNTQuNDMgNDk2LjM1IDM2OCA0NzEuOTIgMzkyLjQzTDI1Ni4zNiAxNzYuODZDMjgwLjc5IDE1Mi40NCAyOTQuMzYgMTM4Ljg3IDI5Ny4wNyAxMzYuMTVDMzE1Ljk3IDExNy4yNSAzMDIuNTkgODQuOTQgMjc1Ljg2IDg0Ljk0QzI2MC42NSA4NC45NCAxMzguOTQgODQuOTQgMTIzLjczIDg0Ljk0QzEwNy4xNiA4NC45NCA5My43MyA5OC4zNyA5My43MyAxMTQuOTRDOTMuNzMgMTMwLjE1IDkzLjczIDI1MS44NiA5My43MyAyNjcuMDdDOTMuNzMgMjkzLjggMTI2LjA0IDMwNy4xOCAxNDQuOTQgMjg4LjI4QzE1MC4zNyAyODIuODYgMTYzLjk0IDI2OS4yOSAxODUuNjUgMjQ3LjU3WiIgaWQ9ImFYVDAwb2VrQyI+PC9wYXRoPjwvZGVmcz48Zz48Zz48dXNlIHhsaW5rOmhyZWY9IiNhWFQwMG9la0MiIG9wYWNpdHk9IjEiIGZpbGw9IiMwMDAwMDAiIGZpbGwtb3BhY2l0eT0iMSI+PC91c2U+PGc+PHVzZSB4bGluazpocmVmPSIjYVhUMDBvZWtDIiBvcGFjaXR5PSIxIiBmaWxsLW9wYWNpdHk9IjAiIHN0cm9rZT0iIzAwMDAwMCIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2Utb3BhY2l0eT0iMCI+PC91c2U+PC9nPjwvZz48L2c+PC9zdmc+');
+        background-size: contain;
+        cursor: nwse-resize;
+        opacity: 0;
+        will-change: opacity;
+        transition: opacity 250ms ease-out;
+
+        &::after {
+          content: none;
+        }
+      }
+
+      &.react-resizable {
+        &:hover {
+          .react-resizable-handle {
+            opacity: 1;
+          }
+        }
+      }
+
+      &.react-grid-placeholder {
+        background: #2f97b9;
+      }
+
+      .keen-dataviz {
+        overflow: auto;
+      }
+
+      img {
+        pointer-events: none;
+      }
+  }
+
+  .react-grid-layout {
+    min-height: 230px;
+  }
+  
 }
 
 @keyframes spin {
