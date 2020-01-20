@@ -466,7 +466,7 @@ body {
     }
 
     & > .keen-dataviz {
-      overflow: hidden;
+      overflow: auto;
       width: 100%;
       margin-top: 0;
       border: 1px solid #eee;
@@ -539,7 +539,7 @@ body {
       }
 
       & > .keen-dataviz {
-        overflow: hidden;
+        overflow: auto;
         width: 100%;
         margin-top: 0;
         border: 1px solid #eee;
