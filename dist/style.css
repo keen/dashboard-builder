@@ -1329,9 +1329,9 @@ body {
         display: block;
       }
 
-.dashboard-builder .layout.editor .keen-dataviz {
-        pointer-events: none;
-}
+.dashboard-builder .layout.editor .keen-dataviz .c3-chart {
+          pointer-events: none;
+        }
 
 .dashboard-builder .react-grid-item:hover {
   z-index: 100;
