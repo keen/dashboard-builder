@@ -1234,7 +1234,9 @@ body {
   .layout {
     &.editor {
       .keen-dataviz {
-        pointer-events: none;
+        .c3-chart {
+          pointer-events: none;
+        }
       }
     }
   }
