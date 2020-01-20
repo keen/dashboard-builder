@@ -524,7 +524,7 @@ body {
 }
 
 .dashboard-builder .chart-container > .keen-dataviz {
-  overflow: hidden;
+  overflow: auto;
   width: 100%;
   margin-top: 0;
   border: 1px solid #eee;
@@ -610,7 +610,7 @@ body {
 }
 
 .dashboard-builder .chart-container-viewer > .keen-dataviz {
-  overflow: hidden;
+  overflow: auto;
   width: 100%;
   margin-top: 0;
   border: 1px solid #eee;
