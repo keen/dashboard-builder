@@ -12,7 +12,8 @@ let definePluginVars = {};
 if (process.env.NODE_ENV === 'development') {
   const demoConfig = require('../demo-config');
   definePluginVars = {
-    webpackKeenGlobals: JSON.stringify({ demoConfig })
+    webpackKeenGlobals: JSON.stringify({ demoConfig }),
+    VERSION: JSON.stringify(require('./package.json').version)
   };
 }
 
