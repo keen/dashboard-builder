@@ -19,6 +19,14 @@ if (process.env.NODE_ENV === 'development') {
   };
 }
 
+if (process.env.NODE_ENV === 'production') {
+  definePluginVars = {
+    KEEN_DASHBOARD_BUILDER_VERSION: JSON.stringify(
+      require('./package.json').version
+    )
+  };
+}
+
 switch (process.env.NODE_ENV) {
   case 'production':
     switch (process.env.component) {
