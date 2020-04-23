@@ -1,0 +1,102 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`newGridDataParse() should parse data correctly 1`] = `
+Object {
+  "data": Object {
+    "items": Array [
+      Object {
+        "height": 40,
+        "left": 20,
+        "text": "<p>Component</p>",
+        "top": 20,
+        "type": "paragraph",
+        "width": 1160,
+      },
+      Object {
+        "chartTitle": "Title",
+        "height": 2800,
+        "left": 620,
+        "savedQuery": Array [
+          Object {
+            "label": "Saved query",
+            "value": "saved_query",
+          },
+        ],
+        "top": 80,
+        "type": "bar",
+        "width": 560,
+      },
+    ],
+  },
+  "settings": Object {
+    "items": Array [
+      Object {
+        "h": 0,
+        "height": 40,
+        "i": "7a99a8d0-bf4f-429b-8bb7-520bf069ac59",
+        "left": 20,
+        "text": "<p>Component</p>",
+        "top": 20,
+        "type": "paragraph",
+        "w": 11,
+        "width": 1160,
+        "x": 0,
+        "y": 0,
+      },
+      Object {
+        "chartTitle": "Title",
+        "h": 84,
+        "height": 2800,
+        "i": "7a99a8d0-bf4f-429b-8bb7-520bf069ac59",
+        "left": 620,
+        "savedQuery": Array [
+          Object {
+            "label": "Saved query",
+            "value": "saved_query",
+          },
+        ],
+        "top": 80,
+        "type": "bar",
+        "w": 5,
+        "width": 560,
+        "x": 6,
+        "y": 0,
+      },
+    ],
+    "layout": Array [
+      Object {
+        "h": 0,
+        "height": 40,
+        "i": "7a99a8d0-bf4f-429b-8bb7-520bf069ac59",
+        "left": 20,
+        "text": "<p>Component</p>",
+        "top": 20,
+        "type": "paragraph",
+        "w": 11,
+        "width": 1160,
+        "x": 0,
+        "y": 0,
+      },
+      Object {
+        "chartTitle": "Title",
+        "h": 84,
+        "height": 2800,
+        "i": "7a99a8d0-bf4f-429b-8bb7-520bf069ac59",
+        "left": 620,
+        "savedQuery": Array [
+          Object {
+            "label": "Saved query",
+            "value": "saved_query",
+          },
+        ],
+        "top": 80,
+        "type": "bar",
+        "w": 5,
+        "width": 560,
+        "x": 6,
+        "y": 0,
+      },
+    ],
+  },
+}
+`;

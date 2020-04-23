@@ -12,7 +12,18 @@ let definePluginVars = {};
 if (process.env.NODE_ENV === 'development') {
   const demoConfig = require('../demo-config');
   definePluginVars = {
-    webpackKeenGlobals: JSON.stringify({ demoConfig })
+    webpackKeenGlobals: JSON.stringify({ demoConfig }),
+    KEEN_DASHBOARD_BUILDER_VERSION: JSON.stringify(
+      require('./package.json').version
+    )
+  };
+}
+
+if (process.env.NODE_ENV === 'production') {
+  definePluginVars = {
+    KEEN_DASHBOARD_BUILDER_VERSION: JSON.stringify(
+      require('./package.json').version
+    )
   };
 }
 
